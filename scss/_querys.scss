@@ -1,0 +1,17 @@
+@media (max-width:1200px) {
+header{
+    & nav{
+        display: none;
+        pointer-events: none;
+        width: 100px;
+    }
+    & a{
+        overflow: visible;
+    }
+    & .hamburguesa{
+        order: 1;
+        width: 40px;
+        display: flex;
+    }
+    }
+}

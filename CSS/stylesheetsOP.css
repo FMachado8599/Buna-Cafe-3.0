@@ -1,0 +1,690 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100;0,700;0,800;0,900;1,100;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap");
+@font-face {
+  font-family: "Monserrat";
+  src: url(./MULTIMEDIA/FONTS/Montserrat-Bold.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #090c0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  width: 100%;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  color: #f8f6ee;
+}
+
+a {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #f8f6ee;
+  text-decoration: none;
+  overflow: visible;
+}
+
+h1, h2, h3 {
+  overflow: visible;
+  font-weight: 700;
+}
+
+ol, ul, li {
+  padding: 0rem;
+  overflow: visible;
+  list-style: none;
+  margin: 0;
+}
+
+button {
+  transition: border-color 200ms;
+}
+
+button:hover {
+  border-color: #f8f6ee;
+  border-style: double;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0%;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  opacity: 100%;
+}
+
+header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 10svh;
+  overflow: hidden;
+  align-items: center;
+}
+header .logoBuna {
+  overflow: visible;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  object-fit: scale-down;
+}
+header .hamburguesa {
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 3rem;
+  gap: 0.65rem;
+  overflow: visible;
+}
+header .hamburguesa > div {
+  background-color: #efe9d2;
+  height: 2px;
+  width: 40px;
+  border-radius: 5px;
+  transition: all 0.4s;
+  transform-origin: left;
+  overflow: visible;
+}
+header .hamburguesa:hover {
+  height: 2rem;
+  width: 2rem;
+}
+header .hamburguesa:hover > div {
+  background-color: #e5af5a;
+  width: 120%;
+}
+header .hamburguesa:hover div:first-child {
+  transform: rotate(45deg);
+}
+header .hamburguesa:hover div:nth-child(2) {
+  opacity: 0;
+}
+header .hamburguesa:hover div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header .hamburguesa::after div:first-child {
+  transform: rotate(45deg);
+}
+header .hamburguesa::after div:nth-child(2) {
+  opacity: 0;
+}
+header .hamburguesa::after div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header nav .barraMenu {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 0px;
+  overflow: visible;
+}
+header nav .barraMenu li {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  font-size: 16px;
+  height: 10svh;
+}
+header nav .barraMenu li a {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  font-weight: 700;
+}
+header nav .barraMenu li a:hover {
+  width: 100%;
+  left: 0;
+  text-shadow: 0px 0px 10px #e5af5a;
+  background-position: bottom;
+  text-decoration: underline;
+  text-decoration-color: #e5af5a;
+  text-decoration-thickness: 3px;
+  text-underline-position: below;
+  text-underline-offset: 10px;
+  overflow: visible;
+}
+header .menuDesplegable {
+  background-color: #1f4437;
+}
+header .offcanvas-header {
+  background-color: #e5af5a;
+}
+header .btn {
+  color: transparent;
+  background-color: none;
+}
+header .btnPrimary {
+  color: transparent;
+  background-color: none;
+}
+
+.imagenFondoIndex {
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 0%;
+  height: 100svh;
+  -webkit-mask-image: linear-gradient(#191919, transparent), linear-gradient(#1f4437, transparent);
+  mask-image: linear-gradient(#1f4437, transparent);
+  background-color: #1f4437;
+  overflow: hidden;
+}
+.imagenFondoIndex img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 90svh;
+  width: 80%;
+  gap: 20px;
+}
+.landing .titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.landing .titulo h1, .landing .titulo h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#f8f6ee, #c6c5c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing .titulo span {
+  background-color: #e5af5a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing .botonesLanding {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+.landing .botonesLanding button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border-style: solid 2px transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.landing .botonesLanding button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+
+.areaSobreNos {
+  height: 100svh;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10svh;
+}
+.areaSobreNos .tituloAreaSobreNos {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#efe9d2, #c6c5c1, #efe9d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.areaSobreNos .seccionSobreNos {
+  background-image: linear-gradient(to left, rgba(31, 68, 55, 0.6) 30%, rgba(31, 68, 55, 0.3137254902) 50%), url(../MULTIMEDIA/IMAGENES/cafe_restaurant.PNG);
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: opacity(20%);
+  width: 80%;
+  max-width: 900px;
+  height: 40svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  background-position: center;
+  box-shadow: 0 0 400px #1f4437, 0 0 1000px rgba(31, 68, 55, 0.0196078431);
+  overflow: hidden;
+  transition-duration: 300ms;
+  transition-property: transform;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.areaSobreNos .seccionSobreNos:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1200px #1f4437, 0 0 1300px rgba(31, 68, 55, 0.0196078431);
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos * {
+  margin: 10px 30px 10px 0px;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos p {
+  width: 70%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-shadow: 0px 0px 1px #191919;
+  font-weight: 300;
+  font-size: 24px;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #e5af5a;
+  text-transform: uppercase;
+  text-shadow: 5px 0 3px rgba(27, 27, 27, 0.4392156863);
+  overflow: visible;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border-style: solid 2px transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button a {
+  margin: 0%;
+}
+
+.seccionPlanes {
+  position: relative;
+  background-image: linear-gradient(to left, rgba(31, 68, 55, 0.0039215686) 10%, rgba(31, 68, 55, 0.0039215686));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 900px;
+  max-width: 80%;
+  height: 60svh;
+  max-height: 80svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  margin-top: 10svh;
+  transition-duration: 300ms;
+  transition-property: transform, background-size;
+  box-shadow: 0 0 400px #1f4437, 0 0 1000px rgba(31, 68, 55, 0.0196078431);
+  background-color: rgba(31, 68, 55, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 2svh;
+  overflow: visible;
+  z-index: 1;
+}
+.seccionPlanes:hover {
+  transform: scale(1.05);
+}
+.seccionPlanes .textoPlanes {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  margin-left: 3svh;
+  padding-right: 8px;
+  overflow: visible;
+}
+.seccionPlanes .textoPlanes p {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #efe9d2;
+  font-weight: 300;
+}
+.seccionPlanes .textoPlanes h2 {
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #e5af5a;
+  text-transform: uppercase;
+  overflow: visible;
+}
+.seccionPlanes .textoPlanes button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border-style: solid 2px transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.seccionPlanes .textoPlanes button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.seccionPlanes .explicacionPlan {
+  width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.seccionPlanes .explicacionPlan img {
+  width: 100px;
+  transition: width 200ms;
+}
+.seccionPlanes .explicacionPlan img:hover {
+  width: 105px;
+}
+.seccionPlanes .explicacionPlan p {
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 5;
+  text-shadow: 0px 0px 10px #1f4437;
+}
+.seccionPlanes .imagenGranos {
+  position: absolute;
+  width: 60%;
+  max-width: 60svh;
+  filter: drop-shadow(22px 22px 50px);
+  top: 60%;
+  right: -20%;
+  z-index: 4;
+}
+
+.paqueteGranos {
+  position: absolute;
+  width: 300px;
+  max-width: 60svh;
+  filter: drop-shadow(22px 22px 50px);
+  top: 190svh;
+  z-index: -3;
+}
+
+.seccionBeneficios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  max-width: 1400px;
+  align-items: center;
+  height: 80svh;
+  padding-top: 10svh;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+.seccionBeneficios h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #efe9d2;
+  text-align: center;
+  overflow: visible;
+}
+.seccionBeneficios span {
+  color: #e5af5a;
+  text-shadow: 0px 0px 50px #2F6C55;
+}
+.seccionBeneficios .beneficios {
+  margin: 15svh 0px 10svh 0svh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30svh;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  flex-wrap: wrap;
+}
+.seccionBeneficios .beneficios div {
+  margin: 20px 2.5svh 20px 2.5svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  padding: 5svh 5svh 5svh 5svh;
+  transition: transform 300ms;
+  overflow: visible;
+}
+.seccionBeneficios .beneficios div:hover {
+  box-shadow: 0 0 20px #be9c51, 0 0 50px #b18a44;
+  border-radius: 3svh;
+  background-color: rgba(47, 108, 85, 0.3137254902);
+  backdrop-filter: blur(50px);
+  transform: scale(1.1);
+}
+.seccionBeneficios .beneficios div:hover p {
+  opacity: 100%;
+}
+.seccionBeneficios .beneficios div h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e5af5a;
+  height: 10svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1svh 0px 1svh 0px;
+}
+.seccionBeneficios .beneficios div img {
+  height: 100px;
+  transition: transform 300ms;
+  filter: drop-shadow(3px 5px 5px rgba(229, 175, 90, 0.1882352941));
+  overflow: visible;
+}
+.seccionBeneficios .beneficios p {
+  width: 100%;
+  text-align: center;
+  opacity: 0%;
+  transition: opacity 300ms;
+}
+
+.descuento {
+  width: 40%;
+  min-width: 400px;
+  height: 30svh;
+  border: 1px solid transparent;
+  border-radius: 3svh;
+  padding: 0svh 2svh 0svh 2svh;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  box-shadow: 0 0px 32px 0 #e5af5a;
+  background-color: rgba(31, 68, 55, 0.4392156863);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 3px outset #be9c51;
+}
+.descuento h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  color: #e5af5a;
+}
+.descuento .barraDescuentos {
+  background-color: #e5af5a;
+  height: 80%;
+}
+.descuento .expDescuento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25svh;
+  width: 90%;
+}
+.descuento .expDescuento p {
+  font-size: 18px;
+}
+.descuento .expDescuento h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e5af5a;
+}
+.descuento .expDescuento h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  color: #e5af5a;
+}
+
+.shadow:before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -2;
+  background: conic-gradient(from 90deg at 40% -25%, #1f4437, #2F6C55);
+  filter: blur(100px);
+}
+
+footer {
+  height: 10svh;
+  margin-top: 5svh;
+  border-top: #966d38;
+  border-style: solid;
+  border-top-width: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row;
+  align-items: center;
+}
+footer .logoBuna {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 50px;
+  object-fit: scale-down;
+}
+footer .barraMenuFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+footer .barraMenuFooter li {
+  font-weight: 700;
+}
+footer .iconosRS {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+}
+footer .iconosRS a {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  margin-left: 1.5pc;
+}
+footer .iconosRS a img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+
+/*# sourceMappingURL=stylesheetsOP.css.map */

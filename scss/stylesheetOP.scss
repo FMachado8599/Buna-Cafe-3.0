@@ -1,4 +1,13 @@
+@import "_variables";
+@import "_mixin";
+
+@import "_general";
 @import "_header";
-body{
-    background-color: red;
-}
+@import "_index";
+@import "_productos";
+@import "_sobreNosotros";
+@import "_suscripciones";
+@import "_contacto";
+@import "_footer";
+
+

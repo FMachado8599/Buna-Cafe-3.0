@@ -42,6 +42,7 @@ a{
     color: #f8f6ee;
     text-decoration: none;
     overflow: visible;
+    font-weight: 700;
 }
 h1,h2,h3{
     overflow: visible;
@@ -193,11 +194,10 @@ header{
         pointer-events: none;
         width: 100px;
     }
-    .elementosHeader a{
+    header a{
         overflow: visible;
     }
     .hamburguesa{
-        opacity: 100%;
         order: 1;
         width: 40px;
         display: flex;

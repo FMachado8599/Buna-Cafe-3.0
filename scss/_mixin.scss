@@ -1,0 +1,23 @@
+@mixin boton($fondoButton, $fondoButtonHover, $borderButtonHover){
+    font-family: $fontH;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    --tw-text-opacity: 1;
+    color: $white1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    border-style: solid 2px transparent;
+    overflow: visible;
+    height: 50px;
+    width: fit-content;
+    background-image: $fondoButton;
+    transition: all 200ms;
+    &:hover{
+        background-image: $fondoButtonHover;
+        border: $borderButtonHover;
+    }
+}

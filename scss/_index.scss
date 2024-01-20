@@ -1,0 +1,388 @@
+.imagenFondoIndex{
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    height: 100svh;
+    -webkit-mask-image: linear-gradient(#191919, transparent),linear-gradient(#1f4437, transparent);
+    mask-image: linear-gradient( #1f4437 , transparent);
+    background-color: #1f4437;
+    overflow: hidden;
+    & img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.landing{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 90svh;
+    width: 80%;
+    gap: 20px;
+    & .titulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        & h1,h2{
+            text-transform: uppercase;
+            font-family: $fontH;
+            font-size: 72px;
+            background: -webkit-linear-gradient(#f8f6ee, #c6c5c1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        & span{
+            background-color: #e5af5a;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    & .botonesLanding{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 20px;
+        & button{
+            @include boton(
+                linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                solid 2px $white1,
+                )
+        }        
+    }
+}
+.areaSobreNos{
+    height: 100svh;
+    width: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10svh;
+
+    & .tituloAreaSobreNos{
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-size: 72px;
+        background: -webkit-linear-gradient(#efe9d2,#c6c5c1, #efe9d2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+    & .seccionSobreNos{
+        background-image: linear-gradient(to left, #1f443799 30%, #1f443750 50%), url(../MULTIMEDIA/IMAGENES/cafe_restaurant.PNG) ;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: opacity(20%);
+        width: 80%;
+        max-width: 900px;
+        height: 40svh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-radius: 10px;
+        background-position: center;
+        box-shadow: 0 0 400px #1f4437 , 0 0 1000px #1f443705;
+        overflow: hidden;
+        transition-duration: 300ms;
+        transition-property: transform;
+        animation-name: example;
+        animation-duration: 4s; 
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 1200px #1f4437 , 0 0 1300px #1f443705;
+        }
+        & .textoSobreNos{
+            grid-column: 2/3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            & *{
+                margin: 10px 30px 10px 0px;
+            }
+            & p{
+                width: 70%;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-shadow: 0px 0px 1px #191919;
+                font-weight: 300;
+                font-size: 24px;
+            }
+            & h2{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 34px;
+                font-weight: 800;
+                color: #e5af5a;
+                text-transform: uppercase;
+                text-shadow: 5px 0 3px #1b1b1b70;
+                overflow: visible;
+            }
+            & button{
+                @include boton(
+                    linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                    linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                    solid 2px $white1,
+                    );
+                & a{
+                    margin: 0%;
+                }
+            }
+        }
+    }
+}
+.seccionPlanes{
+    position: relative;
+    background-image:  linear-gradient(to left, #1f443701 10%, #1f443701 );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 900px;
+    max-width: 80%;
+    height: 60svh;
+    max-height: 80svh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 10px;
+    margin-top: 10svh;
+    transition-duration: 300ms;
+    transition-property: transform, background-size;
+    box-shadow: 0 0 400px #1f4437 , 0 0 1000px #1f443705;
+    background-color: rgb(31, 68, 55, 0.50);
+    backdrop-filter: blur(5px);
+    padding: 2svh;
+    overflow: visible;
+    z-index: 1;
+    &:hover{
+        transform: scale(1.05);
+    }
+    & .textoPlanes{
+        grid-column: 1/2;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        margin-left: 3svh;
+        padding-right: 8px;
+        overflow: visible;
+        & p{
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color:#efe9d2;
+            font-weight: 300;
+        }
+        & h2{
+            width: 90%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #e5af5a;
+            text-transform: uppercase;
+            overflow: visible;
+        }
+        & button{
+            @include boton(
+                linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                solid 2px $white1,
+                )
+        }    
+    }
+    & .explicacionPlan{
+        width: 350px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        & img{
+            width: 100px;
+            transition: width 200ms;
+            &:hover{
+                width: 105px;
+            }
+        }
+        & p{
+            text-transform: uppercase;
+            font-weight: 500;
+            z-index: 5 ;
+            text-shadow: 0px 0px 10px #1f4437;
+        }
+    }
+    & .imagenGranos{
+        position: absolute;
+        width: 60%;
+        max-width: 60svh;
+        filter: drop-shadow(22px 22px 50px);
+        top: 60%;
+        right: -20%;
+        z-index: 4;
+    }
+
+}
+.paqueteGranos{
+    position: absolute;
+    width: 300px;
+    max-width: 60svh;
+    filter: drop-shadow(22px 22px 50px);
+    top: 190svh;
+    z-index: -3;
+}
+.seccionBeneficios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    max-width: 1400px;
+    align-items: center;
+    height: 80svh;
+    padding-top: 10svh;
+    flex-wrap: wrap;
+    overflow: visible;
+    & h2{
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-size: 60px;
+        color: #efe9d2;
+        text-align: center;
+        overflow: visible;
+    }
+    & span{
+        color: #e5af5a;
+        text-shadow: 0px 0px 50px #2F6C55;
+    }
+    & .beneficios{
+        margin: 15svh 0px 10svh 0svh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30svh;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        flex-wrap: wrap;
+        & div{
+            margin: 20px 2.5svh 20px 2.5svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: visible;
+            padding: 5svh 5svh 5svh 5svh;
+            transition: transform 300ms;
+            overflow: visible;
+            &:hover{
+                box-shadow: 0 0 20px $gold1 , 0 0 50px $gold2;
+                border-radius: 3svh;
+                background-color: #2F6C5550;
+                backdrop-filter: blur(50px);
+                transform: scale(1.1);
+                & p{
+                    opacity: 100%;
+                }
+            }
+            & h2{
+                text-align: center;
+                font-family: 'Montserrat',sans-serif;
+                font-size: 24px;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: #e5af5a;
+                height: 10svh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1svh 0px 1svh 0px;
+            }
+            & img{
+                height: 100px;
+                transition: transform 300ms;
+                filter: drop-shadow(3px 5px 5px #e5af5a30);
+                overflow: visible;
+            }
+        }
+        & p{
+            width: 100%;
+            text-align: center;
+            opacity: 0%;
+            transition: opacity 300ms;
+        }
+    }
+}
+.descuento{
+    width: 40%;
+    min-width: 400px;
+    height: 30svh;
+    border: 1px solid transparent;
+    border-radius: 3svh;
+    padding: 0svh 2svh 0svh 2svh;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+    box-shadow: 0 0px 32px 0 #e5af5a;
+    background-color: $green250;
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border: 3px outset $gold1;
+    & h2{
+        font-family: 'Montserrat',sans-serif;
+        font-size: 47px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: right;
+        color: #e5af5a;
+    }
+    & .barraDescuentos{
+        background-color: #e5af5a;
+        height: 80%;
+    }
+    & .expDescuento{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 25svh;
+        width: 90%;
+        & p{
+            font-size: 18px;
+        }
+        & h3{
+            font-family: 'Montserrat',sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #e5af5a;
+        }
+        & h2{
+            font-family: 'Montserrat',sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: right;
+            color: #e5af5a;
+        }
+    }
+
+}
+.shadow{
+    &:before {
+    content:"";
+    position: absolute;
+    inset: -5px;
+    z-index: -2;
+    background: conic-gradient(from 90deg at 40% -25%, #1f4437, #2F6C55);
+    filter: blur(100px);
+    }
+}
