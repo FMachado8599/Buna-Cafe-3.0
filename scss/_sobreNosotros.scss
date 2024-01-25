@@ -1,0 +1,400 @@
+.imagenFondo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    -webkit-mask-image: linear-gradient(#191919 15%, transparent);
+    mask-image: linear-gradient(#191919 15%, transparent);
+    object-fit: cover;
+}
+.landingSobreNos{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 90svh;
+    gap: 3svh;
+    & .logoSobreNos{
+        width: auto;
+        height: 40svh;
+    }
+    & h1{
+        font-family: $fontH;
+        font-size: xx-large;
+        color: #e5af5a;
+        font-weight: 700;
+        overflow: visible;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px #1b1b1b;
+        text-align: center;
+    }
+    p{
+        width: 75%;
+        overflow: visible;
+        padding: 1rem 0 1rem 0;
+        font-family: $fontH;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 5vh;
+        text-shadow: 2px 2px 5px #1b1b1b;
+        font-size: 16px;
+    }
+    
+}
+.inicioAbout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40svh;
+    background-color: #efe9d2;
+    border-radius: 1.5svh;
+    overflow: visible;
+    margin-bottom:10svh;
+    & div{
+        padding-left: 2rem;
+        overflow: visible;
+        & img{
+            position: relative;
+            top: 0px;
+            border-radius: 3%;
+            width: 100%;
+            
+            aspect-ratio: 1/1;
+        }
+    }
+    & p{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        min-width: 150px;
+        width: 90%;
+        color: #1b1b1b;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 2svh;
+    }
+}
+.quoteAbout{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 10svh 0 10svh 0;
+    height: 40svh;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    & .fondoQuoteAbout{
+        background-image: radial-gradient($green299 10%, $green210);
+        z-index: -3;
+        position: absolute;
+        left: -20px;
+        width: 80%;
+        height: 80%;
+        border-radius: 24px;
+        box-shadow: 0px 0px 1200px $green1;
+    }
+    & .textoQuoteAbout{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        text-align: right;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        width: 300px;
+        & *{
+            text-wrap: wrap;
+        }
+        & .tituloQuoteAbout{
+            font-family: $fontH;
+            font-size: xx-large;
+            color: #e5af5a;
+            font-weight: 700;
+            overflow: visible;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #1b1b1b;
+            text-align: right;
+            display: flex;
+            align-items: start;
+            grid-row: 1fr 1fr;
+            grid-column: 1fr;
+        }
+        & .quote{
+            font-family: $fontH;
+            font-size: 20px;
+            font-weight: 500;
+            width: 300px;
+            max-width: 100%;
+            text-align: right;
+            text-shadow: 2px 2px 4px#1b1b1b;
+            flex-wrap: wrap;
+            text-wrap: wrap;
+        }
+    }
+    & video{
+        position: relative;
+        margin: 30px;
+        width: 60%;
+        border-radius: 24px;
+        overflow-x: clip;
+        overflow-y: visible;
+    // & .areaVideo{
+    //     position: relative;
+    //     width: 190%;
+    //     height: auto;
+    //     overflow: visible;
+
+    //     }
+    }
+}
+.nuestrosServicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10svh 0 5svh 0;
+    & .secTitleNS{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .decoration{
+            background-color: #e5af5a;
+            height: 2px;
+            width:100%;
+            border-radius: 5px;
+            transition: all .4s;
+            transform-origin: left;
+            width: 20svh;
+            transition: width 1000ms;
+            &:hover .tituloNuestrosServicios{
+                width: 200%;
+            }
+        }
+        &:hover .decoration{
+            width: 200%;
+        }
+        & .tituloNuestrosServicios{
+            font-size: 50px;
+            font-weight: 700;
+            color: #e5af5a;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: #1b1b1b;
+            padding: 2svh;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    & .tiposServicios {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 40px 40px;
+        overflow: visible;
+        & .servicio {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 350px;
+            max-width: 100%;
+            height: 500px;
+            background: #efe9d2;
+            border-radius: 20px;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            padding: 15px;
+            margin-top: 5svh;
+            overflow: visible;
+            &:hover {
+                height: 550px;
+                cursor: pointer;
+                & .texto {
+                    top: 340px;
+                    height: 250px;
+                }
+                & .imgBox {
+                    top: -50px;
+                    box-shadow: 0 0px 30px $gold1;
+                }
+                & h3{
+                    opacity: 0%;
+                }
+            }
+            & .imgBox {
+                position: absolute;
+                top: 25px;
+                height: 400px;
+                width: 300px;
+                background: #333;
+                border-radius: 12px;
+                overflow: hidden;
+                transition: 0.3s;
+                object-fit: cover;
+            }
+            & .texto {
+                position: absolute;
+                top: 450px;
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                overflow: hidden;
+                transition: 0.5s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                & button{
+                    @include boton(
+                        linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                        linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                        solid 2px $white1
+                    )
+                }
+                & p {
+                    color: $black950;
+                    font-size: 20px;
+                    width: 80%;
+                    text-align: center;
+                    overflow: visible;
+                }
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #966d38;
+                    text-transform: uppercase;
+                    font-family: 'Montserrat', sans-serif;
+                    transition: opacity 300ms;
+                }
+            }
+        }
+    }
+}
+.seccionTestimonios{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5svh 0px 10svh 0px;
+    overflow: visible;
+    & .contTituloTest{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5svh 0px 5svh 0px;
+        & .decoration{
+            background-color: #e5af5a;
+            height: 2px;
+            width: 15svh;
+            border-radius: 5px;
+            transition: all .4s;
+            transform-origin: left;
+            transition: width 1000ms;
+        }
+        & .tituloTestimonios{
+            font-size: 50px;
+            font-weight: 700;
+            color: #e5af5a;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: #1b1b1b;
+            text-align: center;
+            display: grid;
+            grid-row: 1/2;
+            grid-column: 2/3;
+            overflow: visible;
+            margin: 0px;
+            padding: 2svh;
+        }
+        &:hover .decoration{
+            width: 200%;
+        }
+    }
+    & .contTestimonios{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        & .testimonioJuana{
+            @include testimonio;
+            grid-row: 2/3;
+            grid-column: 1/2;
+            & .avatarTestimonio{
+                @include avatar;
+            }
+            & .textoTestimonio{
+                @include textoTestimonio;
+                & .nombreTestimonio{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: x-large;
+                    font-weight: 700;
+                    color: #efe9d2; 
+                }
+                & h4{
+                    @extend .nombreTestimonio;
+                    font-size: smaller;
+                    color: #e5af5a;
+                }
+            } 
+        }
+        & .testimonioJose{
+            @include testimonio;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            & .avatarTestimonio{
+                @include avatar;
+            }
+            & .textoTestimonio{
+                @include textoTestimonio;
+                & .nombreTestimonio{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: x-large;
+                    font-weight: 700;
+                    color: #efe9d2; 
+                }
+                & h4{
+                    @extend .nombreTestimonio;
+                    font-size: smaller;
+                    color: #e5af5a;
+                }
+            } 
+        }
+        & .testimonioElizabeth{
+            @include testimonio;
+            grid-row: 2/3;
+            grid-column: 3/4;
+            & .avatarTestimonio{
+                @include avatar;
+                
+            } 
+            & .textoTestimonio{
+                @include textoTestimonio;
+                & .nombreTestimonio{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: x-large;
+                    font-weight: 700;
+                    color: #efe9d2; 
+                }
+                & h4{
+                    @extend .nombreTestimonio;
+                    font-size: smaller;
+                    color: #e5af5a;
+                }
+            }   
+        }
+    }
+
+}

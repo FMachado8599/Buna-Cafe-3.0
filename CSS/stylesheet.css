@@ -810,16 +810,14 @@ footer{
     text-shadow: 2px 2px 5px #1b1b1b;
     text-align: center;
 }
-.landingSobreNos p{
-    width: 75%;
-    overflow: visible;
-    padding: 1rem 0 1rem 0;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 5vh;
-    text-shadow: 2px 2px 5px #1b1b1b;
-}
+.landingSobreNos{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 90svh;
+    gap: 3svh;
+} 
 .logoSobreNos{
     width: auto;
     height: 40svh;
@@ -948,9 +946,9 @@ footer{
 .areaVideo video{
     width: 100%;
     height: auto;
-    margin: 2rem;
     object-fit: contain;
     align-items: start;
+    border-radius: 24px;
 }
 @media (max-width: 1200px){
     .quoteAbout{
@@ -972,13 +970,15 @@ footer{
     }
     .areaVideo video{
         margin: 0px;
-        width: 100%;
-        height: auto;
-        overflow: visible;
+        width: auto;
+        height: 600;
+
         object-fit: contain;
     }
     .areaVideo{
-        overflow: visible;
+        overflow-x: clip;
+        overflow-y: visible;
+
     }
 }
 /* /////////////NUESTROS SERVICIOS///////////// */
@@ -1090,10 +1090,8 @@ footer{
 }
 
 .tiposServicios .servicio .texto p {
-    color: #11131e;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
-    font-size: medium;
+    color: $black950;
+    font-size: 16px;
 }
 
 .tiposServicios .servicio .texto a {
@@ -1178,7 +1176,7 @@ footer{
     grid-row: 2/3;
     grid-column: 3/4;    
 }
-.testimonios .testimonioJuana,.testimonioElizabeth,.testimonioJose{
+.testimonios .testimonioCont,.testimonioElizabeth,.testimonioJose{
     border-style: solid;
     border-width: 2px;
     border-color: #e5af5a;
@@ -1191,9 +1189,6 @@ footer{
     justify-content: start;
     align-items: center;
 }
-.nombreTestimonio{
-    font-family: 'Montserrat', sans-serif;
-}
 .textoTestimonio .nombreTestimonio{
     font-family: 'Montserrat', sans-serif;
     font-size: x-large;
@@ -1201,15 +1196,11 @@ footer{
     color: #efe9d2; 
 }
 .textoTestimonio h4{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    @extend
     font-size: smaller;
     color: #e5af5a;
 }
-.textoTestimonio span{
-    font-family: 'Montserrat', sans-serif; 
-}
-.testimonios div img{
+.testimonios div .avatarTestimonio{
     width: 150px;
     height: 100px;
     overflow: hidden;
@@ -1225,9 +1216,6 @@ footer{
     
 }
 /* ------------------------------------------------------CONTACTO----------------------------------------------------------------- */
-form{
-    background-color: #f8f6ee;
-}
 label{
     font-family: 'Montserrat', sans-serif;
     font-weight: light;

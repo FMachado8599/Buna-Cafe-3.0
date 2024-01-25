@@ -94,7 +94,7 @@
         animation-name: example;
         animation-duration: 4s; 
         &:hover{
-            transform: scale(1.05);
+            transform: scale(1.07);
             box-shadow: 0 0 1200px #1f4437 , 0 0 1300px #1f443705;
         }
         & .textoSobreNos{
@@ -333,7 +333,7 @@
     z-index: 0;
     overflow: visible;
     box-shadow: 0 0px 32px 0 #e5af5a;
-    background-color: $green250;
+    background-color: $green2;
     backdrop-filter: blur( 4.5px );
     -webkit-backdrop-filter: blur( 4.5px );
     border: 3px outset $gold1;

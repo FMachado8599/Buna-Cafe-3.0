@@ -1,0 +1,178 @@
+.imagenFondo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    -webkit-mask-image: linear-gradient(#191919 15%, transparent);
+    mask-image: linear-gradient(#191919 15%, transparent);
+    object-fit: cover;
+}
+.landingSuscripciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    & .espacioLanSusc{
+        height: 100svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .tituloSuscripciones{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 60px;
+            color: #efe9d2;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px #1f4437;
+            background-color: transparent;
+            text-wrap: wrap;
+            width: 90%;
+        }
+    }
+    & .pasosSus{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        padding-top: 10%;
+        gap: 20px;
+        width: 80%;
+        & .paso{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            text-align: center;
+            gap: 20px;
+            & .imgPasos{
+                object-fit: contain;   
+                height: 75px;
+                width: 75px;
+            }
+            & .tituloPlan{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 24px;
+                color: #efe9d2;
+                text-shadow: 0px 0px 10px #2F6C55;
+                height: fit-content;
+                text-align: center;  
+                min-height: 60px;
+                text-align: center;
+            }
+        }
+    }
+}
+.espacioPlanes{
+    width: 100%;
+    top: 100svh;
+    height: 100svh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    & .ventajasPlanes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .tituloSuscripciones{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 60px;
+            color: #efe9d2;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px #1f4437;
+            background-color: transparent;
+            text-wrap: wrap;
+            width: 90%;
+        }
+        & .listaVentajas{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            text-transform: uppercase;
+            font-family: 'Monserrat',sans-serif;
+            color: #f8f6ee;
+            margin: 20px 0px 20px 0px;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: disc;
+            width: 50%;
+        }
+    }
+    & .planes{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 3svh;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        & .cajaPlanes{
+            padding: 5%;
+            height: 300px;
+            border-top: 2px solid white;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            min-height: 300px;
+            justify-content: space-between;
+            background-image: linear-gradient(#e5af5a50, #966d3850);
+            backdrop-filter: blur(10px);
+            box-shadow: 5px 5px 10px #191919;
+            transition: scale 300ms;
+            & .infoPlanes{
+                text-align: left;
+                & .nombresPlanes{
+                    margin: 0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: #efe9d2;
+                    overflow: visible;
+                    text-align: start;
+                }
+                & .precio{
+                    color: #efe9d2;
+                    padding: 10px 0 10px 0;
+                    text-shadow: 2px 2px 3px #19191970;
+                }
+                & .listaCaracteristicas{
+                    margin: 0;
+                    color: #efe9d2;
+                    list-style: circle;
+                }
+            }
+            & .botonPlan{
+                @include boton(
+                    linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                    linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                    solid 2px $white1
+                );
+                width:90%;
+                border-radius: 16px;
+            }
+            &:hover{
+                scale: 110%;
+            }
+        }
+    }
+}

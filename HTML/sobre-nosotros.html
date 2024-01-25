@@ -78,7 +78,7 @@
       </section>
       <div class="inicioAbout">
         <div>
-          <img src="../MULTIMEDIA/IMAGENES/barista.jpg" alt="Supuesto CEO" />
+          <img src="../MULTIMEDIA/IMAGENES/barista.PNG" alt="Supuesto CEO" />
         </div>
         <p>
           La marca Buna Café se caracteriza por su autenticidad y pasión por el
@@ -91,6 +91,7 @@
         </p>
       </div>
       <div class="quoteAbout">
+        <div class="fondoQuoteAbout"></div>
         <div class="textoQuoteAbout">
           <h2 class="tituloQuoteAbout">Que nos caracteriza?</h2>
           <p class="quote">
@@ -100,22 +101,22 @@
             suscriptores.
           </p>
         </div>
-        <div class="areaVideo">
-          <!-- <div class="recVerde"></div>
-          <div class="recBlanco"></div> -->
+        <!-- <div class="areaVideo"> -->
           <video
             autoplay
             muted
             src="../MULTIMEDIA/VIDEOS/cafe_preparacion_480.mp4"
           >
             Tu buscador no soporta reproducir este video
-          </video>
+          <!-- </video> -->
         </div>
       </div>
-      <div class="nuestrosServicios">
+      <section class="nuestrosServicios">
+        <div class="secTitleNS">
         <div class="decoration"></div>
         <h2 class="tituloNuestrosServicios">Nuestros Servicios</h2>
         <div class="decoration"></div>
+        </div>
         <div class="tiposServicios">
           <div class="servicio">
             <img
@@ -126,7 +127,7 @@
             <div class="texto">
               <h3>Suscripcion</h3>
               <p>Descubre todos los planes que tenemos para ti</p>
-              <a href="./suscripciones.html">Ver Suscripciones</a>
+              <button><a href="./suscripciones.html">Ver Suscripciones</a></button>
             </div>
           </div>
           <div class="servicio">
@@ -138,7 +139,7 @@
             <div class="texto">
               <h3>Pedidos</h3>
               <p>Sabias que podias pedir un cafe a tu domicilio?</p>
-              <a href="">Pedir</a>
+              <button><a href="">Pedir</a></button>
             </div>
           </div>
           <div class="servicio">
@@ -150,47 +151,47 @@
             <div class="texto">
               <h3>Restaurant</h3>
               <p>Puedes pasar por nuestro local de cafeteria cuendo quieras!</p>
-              <a href="./contacto.html">Como Ir</a>
+              <button><a href="">Como llegar</a></button>
             </div>
           </div>
         </div>
-      </div>
-      <div class="testimonios">
-        <h2 class="tituloTestimonios">Testimonios</h2>
-        <div class="testimonioJuana">
-          <img
-            src="../MULTIMEDIA/
-          IMAGENES/juana.JPG"
-            alt="Juana Perez"
-          />
-          <div class="textoTestimonio">
-            <h3 class="nombreTestimonio">Juana Perez</h3>
-            <h4>Cliente Frecuente</h4>
-            <p>
-              Desde que tengo contratado su servicio disfruto todas las manianas
-            </p>
+      </section>
+      <seccion class="seccionTestimonios">
+        <div class="contTituloTest">
+          <div class="decoration"></div>
+          <h2 class="tituloTestimonios">Testimonios</h2>
+          <div class="decoration"></div>
+        </div>
+        <div class="contTestimonios">
+          <div class="testimonioJuana">
+            <img class="avatarTestimonio" src="../MULTIMEDIA/IMAGENES/juana.png" alt="Juana Perez"/>
+            <div class="textoTestimonio">
+              <h3 class="nombreTestimonio">Juana Perez</h3>
+              <h4>Cliente Frecuente</h4>
+              <p>"Desde que tengo contratado su servicio disfruto todas las manianas"</p>
+            </div>
+          </div>
+          <div class="testimonioJose">
+            <img class="avatarTestimonio" src="../MULTIMEDIA/IMAGENES/jose.png" alt="Jose Perez" />
+            <div class="textoTestimonio">
+              <h3 class="nombreTestimonio">Jose Perez</h3>
+              <h4>Cliente Frecuente</h4>
+              <p>"Lo que mas me gusto fue la seleccion de edicion especial"</p>
+            </div>
+          </div>
+          <div class="testimonioElizabeth">
+            <img class="avatarTestimonio"
+              src="../MULTIMEDIA/IMAGENES/elizabeth.png"
+              alt="Elizabeth Perez"
+            />
+            <div class="textoTestimonio">
+              <h3 class="nombreTestimonio">Elizabeth Rodriguez</h3>
+              <h4>Cliente Frecuente</h4>
+              <p>"Nada mejor que su cafe de origen colombiano, recomiendo!"</p>
+            </div>
           </div>
         </div>
-        <div class="testimonioJose">
-          <img src="../MULTIMEDIA/IMAGENES/jose.JPG" alt="Jose Perez" />
-          <div class="textoTestimonio">
-            <h3 class="nombreTestimonio">Jose Perez</h3>
-            <h4>Cliente Frecuente</h4>
-            <p>Lo que mas me gusto fue la seleccion de edicion especial</p>
-          </div>
-        </div>
-        <div class="testimonioElizabeth">
-          <img
-            src="../MULTIMEDIA/IMAGENES/elizabeth.JPG"
-            alt="Elizabeth Perez"
-          />
-          <div class="textoTestimonio">
-            <h3 class="nombreTestimonio">Elizabeth Rodriguez</h3>
-            <h4>Cliente Frecuente</h4>
-            <p>Nada mejor que su cafe de origen colombiano, recomiendo!</p>
-          </div>
-        </div>
-      </div>
+      </seccion>
     </main>
     <footer>
       <img
@@ -198,7 +199,7 @@
         src="../MULTIMEDIA/LOGOS/logo_horizontal.png"
         alt="logo_buna_horizontal"
       />
-      <ul class="barraMenu">
+      <ul class="barraMenuFooter">
         <li>
           <a href="../index.html">Inicio</a>
         </li>
@@ -216,16 +217,20 @@
         </li>
       </ul>
       <div class="iconosRS">
-        <a href="">
-          <img src="../MULTIMEDIA/LOGOS/FACEBOOK-ICO.svg" alt="logo Facebook"
+        <a href="https://www.facebook.com/?locale=es_LA">
+          <img
+            src="../MULTIMEDIA/LOGOS/FACEBOOK-ICO.svg"
+            alt="logo Facebook"
         /></a>
-        <a href=""
+        <a href="https://www.instagram.com"
           ><img
             src="../MULTIMEDIA/LOGOS/INSTAGRAM-ICO.svg"
             alt="logo Instagram"
         /></a>
-        <a href=""
-          ><img src="../MULTIMEDIA/LOGOS/WHATSAPP-ICO.svg" alt="logo Whatsapp"
+        <a href="https://www.whatsapp.com/?lang=es_LA"
+          ><img
+            src="../MULTIMEDIA/LOGOS/WHATSAPP-ICO.svg"
+            alt="logo Whatsapp"
         /></a>
       </div>
     </footer>
