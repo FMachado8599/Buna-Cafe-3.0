@@ -31,11 +31,52 @@
           alt="logo_buna_horizontal"
         />
       </a>
-      <button class="hamburguesa">
+      <button
+        class="btn btn-primary hamburguesa"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom"
+      >
         <div></div>
         <div></div>
         <div></div>
       </button>
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Menú</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="menuDesplegable">
+          <ul class="barraMenuDesplegable">
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="./productos.html">Productos</a>
+            </li>
+            <li>
+              <a href="./suscripciones.html">Suscripciones</a>
+            </li>
+            <li>
+              <a href="#">Sobre Nosotros</a>
+            </li>
+            <li>
+              <a href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <nav>
         <ul class="barraMenu">
           <li>

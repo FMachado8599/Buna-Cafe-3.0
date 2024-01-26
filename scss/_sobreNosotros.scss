@@ -67,7 +67,6 @@
         }
     }
     & p{
-        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -122,8 +121,6 @@
             text-align: right;
             display: flex;
             align-items: start;
-            grid-row: 1fr 1fr;
-            grid-column: 1fr;
         }
         & .quote{
             font-family: $fontH;
@@ -144,13 +141,6 @@
         border-radius: 24px;
         overflow-x: clip;
         overflow-y: visible;
-    // & .areaVideo{
-    //     position: relative;
-    //     width: 190%;
-    //     height: auto;
-    //     overflow: visible;
-
-    //     }
     }
 }
 .nuestrosServicios{
