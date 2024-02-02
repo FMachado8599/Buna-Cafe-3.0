@@ -3,6 +3,50 @@
   font-family: "Monserrat";
   src: url(./MULTIMEDIA/FONTS/Montserrat-Bold.ttf);
 }
+@keyframes movXWrapperArriba {
+  25% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(400px);
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes movXWrapperAbajo {
+  25% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(-400px);
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes movYWrapperArriba {
+  15% {
+    transform: translateY(200px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+  50% {
+    transform: translateY(400px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+}
+@keyframes movYWrapperAbajo {
+  15% {
+    transform: translateY(-200px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+  50% {
+    transform: translateY(-400px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -47,9 +91,8 @@ h1, h2, h3 {
 }
 
 ol, ul, li {
-  padding: 0rem;
+  padding: 0;
   overflow: visible;
-  list-style: none;
   margin: 0;
 }
 
@@ -60,6 +103,11 @@ button {
 button:hover {
   border-color: #f8f6ee;
   border-style: double;
+}
+
+::selection {
+  background-color: #966d38;
+  color: #efe9d2;
 }
 
 ::-webkit-scrollbar {
@@ -196,11 +244,25 @@ header nav .barraMenu li a:hover {
   text-underline-offset: 10px;
   overflow: visible;
 }
-header .menuDesplegable {
+header .offcanvas .menuDesplegable {
   background-color: #1f4437;
+  height: 40svh;
 }
-header .offcanvas-header {
+header .offcanvas .menuDesplegable .barraMenuDesplegable {
+  list-style: none;
+  font-weight: 500;
+}
+header .offcanvas .offcanvas-header {
   background-color: #e5af5a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-left: 45%;
+}
+header .offcanvas .offcanvas-header .offcanvas-title {
+  color: #090c0b;
 }
 header .btn {
   color: transparent;
@@ -655,10 +717,11 @@ header .btnPrimary {
 .imgHeading {
   width: 100%;
   height: 20svh;
-  object-fit: contain;
+  object-fit: fill;
   margin-bottom: 30px;
   overflow: hidden;
   background-image: url(../MULTIMEDIA/IMAGENES/empaquetado_1.webp);
+  background-repeat: no-repeat;
 }
 
 .contHeading {
@@ -685,46 +748,14 @@ header .btnPrimary {
 .productos {
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 1rem;
-  row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2svh;
 }
 .productos img {
   width: 100%;
-  height: 100%;
-}
-.productos .producto1 {
-  grid-area: 1/1/span 2/span 2;
-}
-.productos .producto2 {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  height: 100%;
-}
-.productos .producto3 {
-  grid-column: 4;
-  grid-row: 1;
-}
-.productos .producto4 {
-  grid-column: 3/span 2;
-  grid-row: 2/span 2;
-}
-.productos .producto5 {
-  grid-column: 1;
-  grid-row: 3;
-}
-.productos .producto6 {
-  grid-column: 2;
-  grid-row: 3;
-  height: 2fr;
-}
-.productos .producto1, .productos .producto4 {
-  object-fit: fill;
-  border-radius: 3vh;
-}
-.productos .producto2, .productos .producto3, .productos .producto5, .productos .producto6 {
-  border-radius: 2vh;
+  height: auto;
+  border-radius: 3%;
+  position: relative;
 }
 
 .imagenFondo {
@@ -751,7 +782,13 @@ header .btnPrimary {
   width: auto;
   height: 40svh;
 }
-.landingSobreNos h1 {
+.landingSobreNos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingSobreNos div .tituloPrincipal {
   font-family: "Montserrat", sans-serif;
   font-size: xx-large;
   color: #e5af5a;
@@ -761,16 +798,15 @@ header .btnPrimary {
   text-shadow: 2px 2px 5px #1b1b1b;
   text-align: center;
 }
-.landingSobreNos p {
+.landingSobreNos div p {
   width: 75%;
   overflow: visible;
   padding: 1rem 0 1rem 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 5vh;
   text-shadow: 2px 2px 5px #1b1b1b;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .inicioAbout {
@@ -785,16 +821,14 @@ header .btnPrimary {
   overflow: visible;
   margin-bottom: 10svh;
 }
-.inicioAbout div {
-  padding-left: 2rem;
-  overflow: visible;
-}
-.inicioAbout div img {
+.inicioAbout img {
   position: relative;
   top: 0px;
   border-radius: 3%;
   width: 100%;
   aspect-ratio: 1/1;
+  margin-left: 30px;
+  max-height: 700px;
 }
 .inicioAbout p {
   display: flex;
@@ -815,7 +849,7 @@ header .btnPrimary {
   flex-direction: row;
   width: 80%;
   margin: 10svh 0 10svh 0;
-  height: 40svh;
+  height: 42svh;
   justify-content: center;
   align-items: center;
   overflow: visible;
@@ -825,7 +859,7 @@ header .btnPrimary {
   z-index: -3;
   position: absolute;
   left: -20px;
-  width: 80%;
+  width: 75%;
   height: 80%;
   border-radius: 24px;
   box-shadow: 0px 0px 1200px #41886c;
@@ -833,45 +867,49 @@ header .btnPrimary {
 .quoteAbout .textoQuoteAbout {
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: center;
   text-align: right;
   align-content: flex-start;
   flex-wrap: wrap;
-  width: 300px;
+  width: clamp(150px, 100%, 50rem);
+  text-wrap: wrap;
+  height: 70%;
+  margin: 20px 0px;
+  overflow: visible;
 }
 .quoteAbout .textoQuoteAbout * {
   text-wrap: wrap;
 }
 .quoteAbout .textoQuoteAbout .tituloQuoteAbout {
   font-family: "Montserrat", sans-serif;
-  font-size: xx-large;
+  font-size: 1.5rem;
   color: #e5af5a;
   font-weight: 700;
   overflow: visible;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px #1b1b1b;
   text-align: right;
-  display: flex;
-  align-items: start;
+  padding-right: 30px;
 }
 .quoteAbout .textoQuoteAbout .quote {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-weight: 500;
-  width: 300px;
-  max-width: 100%;
+  width: clamp(150px, 100%, 50rem);
   text-align: right;
   text-shadow: 2px 2px 4px #1b1b1b;
-  flex-wrap: wrap;
-  text-wrap: wrap;
+  padding-right: 30px;
+  margin: 0;
 }
 .quoteAbout video {
   position: relative;
-  margin: 30px;
-  width: 60%;
-  border-radius: 24px;
+  width: 100%;
+  border-radius: 2rem;
   overflow-x: clip;
   overflow-y: visible;
+  max-height: 600px;
+  object-fit: cover;
+  min-width: 300px;
 }
 
 .nuestrosServicios {
@@ -1195,7 +1233,7 @@ header .btnPrimary {
   color: #e5af5a;
 }
 
-.imagenFondo {
+.imagenFondoLan {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -1204,7 +1242,7 @@ header .btnPrimary {
   top: 0%;
   -webkit-mask-image: linear-gradient(#191919 15%, transparent);
   mask-image: linear-gradient(#191919 15%, transparent);
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .landingSuscripciones {
@@ -1213,50 +1251,75 @@ header .btnPrimary {
   justify-content: center;
   align-items: center;
   width: 90%;
+  max-height: 50svh;
 }
-.landingSuscripciones .espacioLanSusc {
-  height: 100svh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.landingSuscripciones .espacioLanSusc .tituloSuscripciones {
+.landingSuscripciones .tituloSuscripciones {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10svh;
   font-family: "Montserrat", sans-serif;
-  font-size: 60px;
-  color: #efe9d2;
+  font-size: clamp(1rem, 10vw, 5rem);
   text-transform: uppercase;
-  text-shadow: 0px 0px 10px #1f4437;
-  background-color: transparent;
-  text-wrap: wrap;
-  width: 90%;
+  background: linear-gradient(300deg, #be9c51, #966d38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.landingSuscripciones .pasosSus {
+
+.seccionPasos {
+  height: 70svh;
+  min-height: 600px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 10svh;
+}
+.seccionPasos .pasosSus {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: start;
-  padding-top: 10%;
-  gap: 20px;
+  gap: 50px;
   width: 80%;
+  position: relative;
+  height: 20svh;
+  list-style: none;
 }
-.landingSuscripciones .pasosSus .paso {
-  width: 30%;
+.seccionPasos .pasosSus .continuacion {
+  display: none;
+  height: 50px;
+}
+.seccionPasos .pasosSus .paso {
+  width: clamp(200px, 20%, 300px);
   display: flex;
   align-items: center;
   flex-flow: column;
+  justify-content: space-evenly;
   text-align: center;
-  gap: 20px;
+  height: 370px;
+  background-image: linear-gradient(45deg, rgba(31, 68, 55, 0.6), rgba(65, 136, 108, 0.6));
+  border-radius: 2rem;
+  padding: 0.6rem;
+  box-shadow: 0 8px 32px rgba(65, 136, 108, 0.5647058824);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: scale 300ms;
 }
-.landingSuscripciones .pasosSus .paso .imgPasos {
+.seccionPasos .pasosSus .paso:hover {
+  scale: 1.23;
+}
+.seccionPasos .pasosSus .paso .imgPasos {
+  margin-top: 20px;
   object-fit: contain;
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
 }
-.landingSuscripciones .pasosSus .paso .tituloPlan {
+.seccionPasos .pasosSus .paso .tituloPlan {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -1267,11 +1330,25 @@ header .btnPrimary {
   min-height: 60px;
   text-align: center;
 }
+.seccionPasos .pasosSus .paso p {
+  font-family: "Open Sans", sans-serif;
+}
+.seccionPasos .fondoPasosSus {
+  position: absolute;
+  z-index: -5;
+  -webkit-mask-image: linear-gradient(#191919 0%, transparent, #191919 0);
+  mask-image: linear-gradient(transparent 0%, #191919 20%, #191919 50%, transparent 60%);
+  height: 200%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  top: 1svh;
+}
 
 .espacioPlanes {
   width: 100%;
   top: 100svh;
-  height: 100svh;
+  height: auto;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1284,10 +1361,12 @@ header .btnPrimary {
   padding: 0;
 }
 .espacioPlanes .ventajasPlanes {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 .espacioPlanes .ventajasPlanes .tituloSuscripciones {
   display: flex;
@@ -1302,21 +1381,91 @@ header .btnPrimary {
   background-color: transparent;
   text-wrap: wrap;
   width: 90%;
+  position: relative;
 }
 .espacioPlanes .ventajasPlanes .listaVentajas {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  margin: 10svh 0px 10svh 0px;
+  gap: 20px;
+  list-style-type: disc;
+  width: 100%;
+  padding: 0 10%;
+  background-image: url(../MULTIMEDIA/IMAGENES/fondoCafeGranos.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60svh;
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(31, 68, 55, 0.6);
+  border-radius: 1rem;
+  height: 150px;
+  backdrop-filter: blur(5px);
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div img {
+  height: 120px;
+  width: 120px;
+  border-radius: 0.8rem;
+  padding: 10px;
+  margin: 0 15px;
+  background-color: rgba(14, 32, 27, 0.6);
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div p {
   text-transform: uppercase;
   font-family: "Monserrat", sans-serif;
   color: #f8f6ee;
-  margin: 20px 0px 20px 0px;
-  flex-direction: column;
-  gap: 20px;
-  list-style-type: disc;
+  text-wrap: wrap;
   width: 50%;
+  margin: 0;
 }
-.espacioPlanes .planes {
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo {
+  z-index: -7;
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow: visible;
+  animation-name: movYWrapperArriba;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba .wrapperDecoYArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo {
+  position: absolute;
+  overflow: visible;
+  height: 100%;
+  width: 500px;
+  animation-name: movXWrapperArriba;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba .wrapperDecoYArriba .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYArriba .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo .ventajasDecoAbajo {
+  z-index: -6;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: #1f4437;
+  filter: blur(150px);
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXAbajo {
+  position: absolute;
+  top: 500px;
+  animation-name: movYWrapperAbajo;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo {
+  right: 0;
+  animation-name: movXWrapperAbajo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.planes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -1325,45 +1474,59 @@ header .btnPrimary {
   align-items: center;
   overflow: visible;
 }
-.espacioPlanes .planes .cajaPlanes {
+.planes .cajaPlanes {
   padding: 5%;
-  height: 300px;
-  border-top: 2px solid white;
+  height: 350px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5647058824);
+  border-bottom: rgba(0, 0, 0, 0.5647058824);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  min-height: 300px;
+  width: 270px;
   justify-content: space-between;
-  background-image: linear-gradient(rgba(229, 175, 90, 0.3137254902), rgba(150, 109, 56, 0.3137254902));
-  backdrop-filter: blur(10px);
+  background-image: linear-gradient(rgba(65, 136, 108, 0.3137254902), rgba(31, 68, 55, 0.5647058824));
+  backdrop-filter: blur(7px);
   box-shadow: 5px 5px 10px #191919;
-  transition: scale 300ms;
+  transition: all 600ms;
 }
-.espacioPlanes .planes .cajaPlanes .infoPlanes {
-  text-align: left;
+.planes .cajaPlanes .infoPlanes {
+  text-align: center;
+  width: 80%;
 }
-.espacioPlanes .planes .cajaPlanes .infoPlanes .nombresPlanes {
+.planes .cajaPlanes .infoPlanes .nombresPlanes {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   color: #efe9d2;
   overflow: visible;
-  text-align: start;
+  text-align: middle;
 }
-.espacioPlanes .planes .cajaPlanes .infoPlanes .precio {
-  color: #efe9d2;
+.planes .cajaPlanes .infoPlanes .precio {
+  color: #be9c51;
   padding: 10px 0 10px 0;
   text-shadow: 2px 2px 3px rgba(25, 25, 25, 0.4392156863);
+  text-transform: uppercase;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.espacioPlanes .planes .cajaPlanes .infoPlanes .listaCaracteristicas {
+.planes .cajaPlanes .infoPlanes .precio span {
+  font-size: 16px;
+  vertical-align: middle;
+  overflow: visible;
+}
+.planes .cajaPlanes .infoPlanes .listaCaracteristicas {
   margin: 0;
   color: #efe9d2;
-  list-style: circle;
+  list-style-type: circle;
+  list-style-image: url(../MULTIMEDIA/VECTORES/tick_li.svg);
+  list-style-position: inside;
+  text-align: start;
 }
-.espacioPlanes .planes .cajaPlanes .botonPlan {
+.planes .cajaPlanes .botonPlan {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -1381,15 +1544,29 @@ header .btnPrimary {
   width: fit-content;
   background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
   transition: all 200ms;
-  width: 90%;
-  border-radius: 16px;
+  font-size: 16px;
+  width: 60%;
+  border-radius: 12px;
 }
-.espacioPlanes .planes .cajaPlanes .botonPlan:hover {
+.planes .cajaPlanes .botonPlan:hover {
   background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
   border: solid 2px #efe9d2;
 }
-.espacioPlanes .planes .cajaPlanes:hover {
+.planes .cajaPlanes:hover {
   scale: 110%;
+  transform: translateY(-20px);
+  background-image: linear-gradient(rgba(65, 136, 108, 0.3137254902), rgba(65, 136, 108, 0.5647058824));
+}
+.planes .fondoPlanes {
+  position: absolute;
+  z-index: -3;
+  height: 600px;
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: bottom;
+  -webkit-mask-image: linear-gradient(#191919 0%, transparent, #191919 0);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
 }
 
 .landingContacto {
@@ -1578,6 +1755,7 @@ footer {
   justify-content: space-evenly;
   flex-flow: row;
   align-items: center;
+  background-color: #090c0b;
 }
 footer .logoBuna {
   display: flex;
@@ -1592,6 +1770,7 @@ footer .barraMenuFooter {
   justify-content: space-around;
   gap: 20px;
   align-items: center;
+  list-style: none;
 }
 footer .barraMenuFooter li {
   font-weight: 700;
@@ -1767,13 +1946,24 @@ footer .iconosRS a img {
   .quoteAbout video {
     width: 100%;
   }
-  .landingSuscripciones .pasosSus {
+  .seccionPasos {
+    height: 130svh;
+  }
+  .seccionPasos .pasosSus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 130svh;
   }
-  .landingSuscripciones .pasosSus .paso {
-    width: 90%;
+  .seccionPasos .pasosSus .continuacion {
+    display: block;
+  }
+  .seccionPasos .pasosSus .paso {
+    height: 400px;
+    width: 80%;
+  }
+  .seccionPasos .fondoPasosSus {
+    width: 100vw;
   }
   .espacioPlanes {
     height: 160svh;
@@ -1781,6 +1971,9 @@ footer .iconosRS a img {
   .espacioPlanes .ventajasPlanes .listaVentajas {
     height: 50svh;
     text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
   }
   .espacioPlanes .planes {
     grid-template-columns: 1fr;

@@ -20,28 +20,32 @@
         width: auto;
         height: 40svh;
     }
-    & h1{
-        font-family: $fontH;
-        font-size: xx-large;
-        color: #e5af5a;
-        font-weight: 700;
-        overflow: visible;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 5px #1b1b1b;
-        text-align: center;
+    & div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .tituloPrincipal{
+            font-family: $fontH;
+            font-size: xx-large;
+            color: #e5af5a;
+            font-weight: 700;
+            overflow: visible;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #1b1b1b;
+            text-align: center;
+        }
+        p{
+            width: 75%;
+            overflow: visible;
+            padding: 1rem 0 1rem 0;
+            font-family: $fontH;
+            font-weight: 500;
+            text-align: center;
+            text-shadow: 2px 2px 5px #1b1b1b;
+            font-size: 24px;
+        }
     }
-    p{
-        width: 75%;
-        overflow: visible;
-        padding: 1rem 0 1rem 0;
-        font-family: $fontH;
-        font-weight: 500;
-        text-align: center;
-        margin-bottom: 5vh;
-        text-shadow: 2px 2px 5px #1b1b1b;
-        font-size: 16px;
-    }
-    
 }
 .inicioAbout{
     display: flex;
@@ -54,18 +58,15 @@
     border-radius: 1.5svh;
     overflow: visible;
     margin-bottom:10svh;
-    & div{
-        padding-left: 2rem;
-        overflow: visible;
         & img{
             position: relative;
             top: 0px;
             border-radius: 3%;
             width: 100%;
-            
             aspect-ratio: 1/1;
+            margin-left: 30px;
+            max-height: 700px;
         }
-    }
     & p{
         display: flex;
         justify-content: center;
@@ -85,7 +86,7 @@
     flex-direction: row;
     width: 80%;
     margin: 10svh 0 10svh 0;
-    height: 40svh;
+    height: clamp(40svh,42svh,45svh);
     justify-content: center;
     align-items: center;
     overflow: visible;
@@ -94,7 +95,7 @@
         z-index: -3;
         position: absolute;
         left: -20px;
-        width: 80%;
+        width: 75%;
         height: 80%;
         border-radius: 24px;
         box-shadow: 0px 0px 1200px $green1;
@@ -102,45 +103,49 @@
     & .textoQuoteAbout{
         display: flex;
         flex-direction: column;
-        justify-content: right;
+        justify-content: center;
         text-align: right;
         align-content: flex-start;
         flex-wrap: wrap;
-        width: 300px;
+        width: clamp(150px,100%,50rem);
+        text-wrap: wrap;
+        height: 70%;
+        margin: 20px 0px;
+        overflow: visible;
         & *{
             text-wrap: wrap;
         }
         & .tituloQuoteAbout{
             font-family: $fontH;
-            font-size: xx-large;
+            font-size: clamp(1rem,1.5rem,2rem);
             color: #e5af5a;
             font-weight: 700;
             overflow: visible;
             text-transform: uppercase;
             text-shadow: 2px 2px 5px #1b1b1b;
             text-align: right;
-            display: flex;
-            align-items: start;
+            padding-right: 30px;
         }
         & .quote{
             font-family: $fontH;
-            font-size: 20px;
+            font-size: clamp(0.1rem,1.1rem,2rem);
             font-weight: 500;
-            width: 300px;
-            max-width: 100%;
+            width: clamp(150px,100%,50rem);
             text-align: right;
             text-shadow: 2px 2px 4px#1b1b1b;
-            flex-wrap: wrap;
-            text-wrap: wrap;
+            padding-right: 30px;
+            margin: 0;
         }
     }
     & video{
         position: relative;
-        margin: 30px;
-        width: 60%;
-        border-radius: 24px;
+        width: 100%;
+        border-radius: 2rem;
         overflow-x: clip;
         overflow-y: visible;
+        max-height: 600px;
+        object-fit: cover;
+        min-width: 300px;
     }
 }
 .nuestrosServicios{

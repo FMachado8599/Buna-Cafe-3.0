@@ -15,11 +15,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../CSS/stylesheetsOP.css" />
   </head>
   <body>
@@ -96,17 +92,15 @@
       </nav>
     </header>
     <main>
-      <img
-        class="imagenFondo"
-        src="../MULTIMEDIA/IMAGENES/restaurant.png"
-        alt=""
-      />
       <section class="landingSuscripciones">
-        <div class="espacioLanSusc">
-          <h1 class="tituloSuscripciones">
-            ¿Como funciona nuestra suscripcion?
-          </h1>
-        </div>
+        <img
+          class="imagenFondoLan"
+          src="../MULTIMEDIA/IMAGENES/restaurant.png"
+          alt=""
+        />
+        <h1 class="tituloSuscripciones">¿Como funciona nuestra suscripcion?</h1>
+      </section>
+      <section class="seccionPasos">
         <ol class="pasosSus">
           <li class="paso">
             <img
@@ -116,6 +110,13 @@
             />
             <h3 class="tituloPlan">Selecciona tu Plan</h3>
             <p>Elige el plan de suscripción que se adapte a tus gustos.</p>
+          </li>
+          <li>
+            <img
+              class="continuacion"
+              src="../MULTIMEDIA/VECTORES/continuacion.svg"
+              alt=""
+            />
           </li>
           <li class="paso">
             <img
@@ -127,6 +128,13 @@
             <p>
               Selecciona los productos que formarán parte de tu suscripción.
             </p>
+          </li>
+          <li>
+            <img
+              class="continuacion"
+              src="../MULTIMEDIA/VECTORES/continuacion.svg"
+              alt=""
+            />
           </li>
           <li class="paso">
             <img
@@ -141,61 +149,99 @@
             </p>
           </li>
         </ol>
+        <img
+          class="fondoPasosSus"
+          src="../MULTIMEDIA/IMAGENES/fondoSuscDesk.webp"
+          alt="repartidor"
+        />
       </section>
       <section class="espacioPlanes">
         <div class="ventajasPlanes">
           <h2 class="tituloSuscripciones">Cuales son las ventajas?</h2>
-          <ul class="listaVentajas">
-            <li>Conveniencia Personaliza</li>
-            <li>Ahorro y Descuentos Exclusivos</li>
-            <li>Exploracion Continua de Sabores</li>
-            <li>Entrega Programada y Sin Preocupaciones</li>
-          </ul>
-        </div>
-        <div class="planes">
-          <div class="cajaPlanes">
-            <div class="infoPlanes">
-              <h3 class="nombresPlanes">Basico</h3>
-              <h2 class="precio">10 USD</h2>
-              <ul class="listaCaracteristicas">
-                <li>Café de Origen Único</li>
-                <li>Entregas Mensuales</li>
-                <li>Acceso a Contenido Exclusivo</li>
-              </ul>
+          <div class="listaVentajas">
+            <div>
+              <img
+                src="../MULTIMEDIA/VECTORES/conveniencia_personalizada.svg"
+                alt=""
+              />
+              <p>Conveniencia Personalizada</p>
             </div>
-            <button class="botonPlan">
-              <a href="./suscripciones.html">Empezar</a>
-            </button>
+            <div>
+              <img src="../MULTIMEDIA/VECTORES/ahorro.svg" alt="" />
+              <p>Ahorro y Descuentos Exclusivos</p>
+            </div>
+            <div>
+              <img
+                src="../MULTIMEDIA/VECTORES/exploracion_sabores.svg"
+                alt=""
+              />
+              <p>Exploracion Continua de Sabores</p>
+            </div>
+            <div>
+              <img src="../MULTIMEDIA/VECTORES/entrega_programada.svg" alt="" />
+              <p>Entrega Programada y Sin Preocupaciones</p>
+            </div>
           </div>
-          <div class="cajaPlanes">
-            <div class="infoPlanes">
-              <h3 class="nombresPlanes">Plus</h3>
-              <h2 class="precio">25 usd</h2>
-              <ul class="listaCaracteristicas">
-                <li>Mezclas Exclusivas</li>
-                <li>Entregas Quincenales</li>
-                <li>Regalo Mensual</li>
-              </ul>
+          <div class="wrapperDecoXArriba">
+            <div class="wrapperDecoYArriba">
+              <div class="ventajasDecoArriba"></div>
             </div>
-            <button class="botonPlan">
-              <a href="./suscripciones.html">Plus</a>
-            </button>
           </div>
-          <div class="cajaPlanes">
-            <div class="infoPlanes">
-              <h3 class="nombresPlanes">Premium</h3>
-              <h2 class="precio">50 usd</h2>
-              <ul class="listaCaracteristicas">
-                <li>Ediciones Limitadas</li>
-                <li>Entregas Semanales</li>
-                <li>Acceso VIP</li>
-              </ul>
+          <div class="wrapperDecoXAbajo">
+            <div class="wrapperDecoYAbajo">
+              <div class="ventajasDecoAbajo"></div>
             </div>
-            <button class="botonPlan">
-              <a href="./suscripciones.html">Ir Premium</a>
-            </button>
           </div>
         </div>
+      </section>
+      <section class="planes">
+        <div class="cajaPlanes">
+          <div class="infoPlanes">
+            <h3 class="nombresPlanes">Basico</h3>
+            <h2 class="precio"><span>USD </span> 10<span> /mes</span></h2>
+            <ul class="listaCaracteristicas">
+              <li>Café de o Origen único</li>
+              <li>Entregas Mensuales</li>
+              <li>Acceso a Contenido Exclusivo</li>
+            </ul>
+          </div>
+          <button class="botonPlan">
+            <a href="./suscripciones.html">Suscribirse</a>
+          </button>
+        </div>
+        <div class="cajaPlanes">
+          <div class="infoPlanes">
+            <h3 class="nombresPlanes">Plus</h3>
+            <h2 class="precio"><span>usd </span> 25<span> /mes</span></h2>
+            <ul class="listaCaracteristicas">
+              <li>Mezclas Exclusivas</li>
+              <li>Entregas Quincenales</li>
+              <li>Regalo Mensual</li>
+            </ul>
+          </div>
+          <button class="botonPlan">
+            <a href="./suscripciones.html">Suscribirse</a>
+          </button>
+        </div>
+        <div class="cajaPlanes">
+          <div class="infoPlanes">
+            <h3 class="nombresPlanes">Premium</h3>
+            <h2 class="precio"><span>usd </span> 50<span> /mes</span></h2>
+            <ul class="listaCaracteristicas">
+              <li>Ediciones Limitadas</li>
+              <li>Entregas Semanales</li>
+              <li>Acceso VIP</li>
+            </ul>
+          </div>
+          <button class="botonPlan">
+            <a href="./suscripciones.html">Suscribirse</a>
+          </button>
+        </div>
+        <img
+          class="fondoPlanes"
+          src="../MULTIMEDIA/IMAGENES/barista_fondo_planes.webp"
+          alt="Una mujer preparando Cafe"
+        />
       </section>
     </main>
     <footer>
@@ -235,5 +281,14 @@
         /></a>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

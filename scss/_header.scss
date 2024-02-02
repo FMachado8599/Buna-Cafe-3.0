@@ -106,11 +106,28 @@ header{
             }
         }
     }
-    & .menuDesplegable{
-        background-color: #1f4437;
-    }
-    & .offcanvas-header{
-        background-color: #e5af5a;
+    & .offcanvas{
+        & .menuDesplegable{
+            background-color: #1f4437;
+            height: 40svh;
+            & .barraMenuDesplegable{
+                list-style: none;
+                font-weight: 500;
+            }
+        }
+        & .offcanvas-header{
+            background-color: #e5af5a;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            padding-left: 45%;
+            & .offcanvas-title{
+    
+                color: $black950;
+            }
+        }
     }
     & .btn{
         color: transparent;

@@ -14,14 +14,18 @@ header{
         display: flex;
     }
     }
+
+
 }
 
 @media (max-width: 480px) {
+    // --------------------------------------footer--------------------------------------
     footer{    
         & .barraMenuFooter{
         display: none;
     }
-    }   
+    }
+    // --------------------------------------index--------------------------------------   
     .landing{
         & .titulo{
             justify-content: left;
@@ -103,7 +107,7 @@ header{
             }
         }
     }
-
+    // --------------------------------------Sobre Nosotros--------------------------------------   
     .inicioAbout{
         height: 80svh;
         flex-direction: column;
@@ -156,14 +160,24 @@ header{
             width: 100%;
         }
     }
-    .landingSuscripciones{
+        // --------------------------------------Suscripciones--------------------------------------   
+    .seccionPasos{
+        height: 130svh;
         & .pasosSus{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            & .paso{
-                width: 90%;
+            height: 130svh;
+            & .continuacion{
+                display: block;
             }
+            & .paso{
+                height: 400px;
+                width: 80%;
+            }
+        }
+        & .fondoPasosSus{
+            width: 100vw;
         }
     }
     .espacioPlanes{
@@ -172,6 +186,9 @@ header{
             .listaVentajas{
                 height: 50svh;
                 text-align: center;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(4,1fr);
+                height: auto;
             }
         }
         & .planes{
@@ -179,6 +196,7 @@ header{
             grid-template-rows: repeat(3,1fr);
         }
     }
+        // --------------------------------------Contacto--------------------------------------   
     .landingContacto{
         align-items: center;
         justify-content: center;
@@ -195,6 +213,7 @@ header{
             }
         }
     }
+        // --------------------------------------Productos--------------------------------------   
     .imgHeading{
         height: 10svh;
         .contHeading{
