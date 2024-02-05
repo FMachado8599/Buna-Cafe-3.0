@@ -1,0 +1,44 @@
+@keyframes movXWrapperArriba{
+    25%{
+        transform: translateX(100px);
+        animation-timing-function:ease-in-out;
+    }
+    50%{
+        transform: translateX(400px);
+        animation-timing-function:ease-in-out;
+    }
+}
+@keyframes movXWrapperAbajo{
+    25%{
+        transform: translateX(100px);
+        animation-timing-function:ease-in-out;
+    }
+    50%{
+        transform: translateX(-400px);
+        animation-timing-function:ease-in-out;
+    }
+}
+@keyframes movYWrapperArriba{
+    15%{
+        transform: translateY(200px);
+        animation-timing-function:ease-in-out;
+        opacity: 50%;
+    }
+    50%{
+        transform: translateY(400px);
+        animation-timing-function:ease-in-out;
+        opacity: 50%;
+    }
+}
+@keyframes movYWrapperAbajo{
+    15%{
+        transform: translateY(-200px);
+        animation-timing-function:ease-in-out;
+        opacity: 50%;
+    }
+    50%{
+        transform: translateY(-400px);
+        animation-timing-function:ease-in-out;
+        opacity: 50%;
+    }
+}

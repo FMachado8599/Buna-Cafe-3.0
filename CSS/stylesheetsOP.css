@@ -1,0 +1,2021 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100;0,700;0,800;0,900;1,100;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap");
+@font-face {
+  font-family: "Monserrat";
+  src: url(./MULTIMEDIA/FONTS/Montserrat-Bold.ttf);
+}
+@keyframes movXWrapperArriba {
+  25% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(400px);
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes movXWrapperAbajo {
+  25% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateX(-400px);
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes movYWrapperArriba {
+  15% {
+    transform: translateY(200px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+  50% {
+    transform: translateY(400px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+}
+@keyframes movYWrapperAbajo {
+  15% {
+    transform: translateY(-200px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+  50% {
+    transform: translateY(-400px);
+    animation-timing-function: ease-in-out;
+    opacity: 50%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #090c0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  width: 100%;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  color: #f8f6ee;
+}
+
+a {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #f8f6ee;
+  text-decoration: none;
+  overflow: visible;
+}
+
+h1, h2, h3 {
+  overflow: visible;
+  font-weight: 700;
+}
+
+ol, ul, li {
+  padding: 0;
+  overflow: visible;
+  margin: 0;
+}
+
+button {
+  transition: border-color 200ms;
+}
+
+button:hover {
+  border-color: #f8f6ee;
+  border-style: double;
+}
+
+::selection {
+  background-color: #966d38;
+  color: #efe9d2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0%;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  opacity: 100%;
+}
+
+.menuDesplegable {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.menuDesplegable ul li {
+  font-size: 16px;
+}
+.menuDesplegable ul li a {
+  font-size: 24px;
+}
+
+header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 10svh;
+  overflow: hidden;
+  align-items: center;
+}
+header .logoBuna {
+  overflow: visible;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  object-fit: scale-down;
+}
+header .hamburguesa {
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 3rem;
+  gap: 0.65rem;
+  overflow: visible;
+}
+header .hamburguesa > div {
+  background-color: #efe9d2;
+  height: 2px;
+  width: 40px;
+  border-radius: 5px;
+  transition: all 0.4s;
+  transform-origin: left;
+  overflow: visible;
+}
+header .hamburguesa:hover {
+  height: 2rem;
+  width: 2rem;
+}
+header .hamburguesa:hover > div {
+  background-color: #e5af5a;
+  width: 120%;
+}
+header .hamburguesa:hover div:first-child {
+  transform: rotate(45deg);
+}
+header .hamburguesa:hover div:nth-child(2) {
+  opacity: 0;
+}
+header .hamburguesa:hover div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header .hamburguesa::after div:first-child {
+  transform: rotate(45deg);
+}
+header .hamburguesa::after div:nth-child(2) {
+  opacity: 0;
+}
+header .hamburguesa::after div:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header nav .barraMenu {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 0px;
+  overflow: visible;
+}
+header nav .barraMenu li {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  font-size: 16px;
+  height: 10svh;
+}
+header nav .barraMenu li a {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  font-weight: 700;
+}
+header nav .barraMenu li a:hover {
+  width: 100%;
+  left: 0;
+  text-shadow: 0px 0px 10px #e5af5a;
+  background-position: bottom;
+  text-decoration: underline;
+  text-decoration-color: #e5af5a;
+  text-decoration-thickness: 3px;
+  text-underline-position: below;
+  text-underline-offset: 10px;
+  overflow: visible;
+}
+header .offcanvas .menuDesplegable {
+  background-color: #1f4437;
+  height: 40svh;
+}
+header .offcanvas .menuDesplegable .barraMenuDesplegable {
+  list-style: none;
+  font-weight: 500;
+}
+header .offcanvas .offcanvas-header {
+  background-color: #e5af5a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-left: 45%;
+}
+header .offcanvas .offcanvas-header .offcanvas-title {
+  color: #090c0b;
+}
+header .btn {
+  color: transparent;
+  background-color: none;
+}
+header .btnPrimary {
+  color: transparent;
+  background-color: none;
+}
+
+.imagenFondoIndex {
+  width: 100%;
+  position: absolute;
+  z-index: -3;
+  top: 0%;
+  height: 100svh;
+  -webkit-mask-image: linear-gradient(#191919, transparent), linear-gradient(#1f4437, transparent);
+  mask-image: linear-gradient(#1f4437, transparent);
+  background-color: #1f4437;
+  overflow: hidden;
+}
+.imagenFondoIndex img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: visible;
+}
+.imagenFondoIndex .imagenFondo {
+  max-width: 100%;
+}
+
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 90svh;
+  width: 80%;
+  gap: 20px;
+}
+.landing .titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.landing .titulo h1, .landing .titulo h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#f8f6ee, #c6c5c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing .titulo span {
+  background-color: #e5af5a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing .botonesLanding {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+.landing .botonesLanding button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.landing .botonesLanding button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+
+.areaSobreNos {
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10svh;
+  padding-top: 10svh;
+  min-height: 1000px;
+}
+.areaSobreNos .tituloAreaSobreNos {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#efe9d2, #c6c5c1, #efe9d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.areaSobreNos .seccionSobreNos {
+  background-image: linear-gradient(to left, #1f4437 10%, rgba(31, 68, 55, 0.5647058824) 50%, transparent 100%), url(../MULTIMEDIA/IMAGENES/cafe_restaurant.PNG);
+  background-size: cover;
+  background-position: left;
+  backdrop-filter: opacity(20%);
+  width: 80%;
+  max-width: 900px;
+  height: 40svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  background-position: center;
+  box-shadow: 0 0 400px #1f4437, 0 0 1000px rgba(31, 68, 55, 0.0196078431);
+  overflow: hidden;
+  transition-duration: 300ms;
+  transition-property: transform;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.areaSobreNos .seccionSobreNos:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 1200px #1f4437, 0 0 1300px rgba(31, 68, 55, 0.0196078431);
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos * {
+  margin: 10px 30px 10px 0px;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos p {
+  width: 70%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-shadow: 0px 0px 1px #191919;
+  font-weight: 300;
+  font-size: 24px;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #e5af5a;
+  text-transform: uppercase;
+  text-shadow: 5px 0 3px rgba(27, 27, 27, 0.4392156863);
+  overflow: visible;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.areaSobreNos .seccionSobreNos .textoSobreNos button a {
+  margin: 0%;
+}
+
+.seccionPlanes {
+  position: relative;
+  background-image: radial-gradient(rgba(65, 136, 108, 0.062745098) 30%, rgba(65, 136, 108, 0.3764705882) 110%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 900px;
+  max-width: 80%;
+  height: 60svh;
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  margin: 10svh 0 10svh 0;
+  transition-duration: 300ms;
+  transition-property: transform, background-size;
+  box-shadow: 0 0 400px #1f4437, 0 0 1000px rgba(31, 68, 55, 0.0196078431);
+  background-color: rgba(31, 68, 55, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 2svh;
+  overflow: visible;
+  z-index: 1;
+}
+.seccionPlanes:hover {
+  transform: scale(1.05);
+}
+.seccionPlanes .textoPlanes {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  margin-left: 3svh;
+  padding-right: 8px;
+  overflow: visible;
+}
+.seccionPlanes .textoPlanes p {
+  font-size: 20px;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #efe9d2;
+  font-weight: 300;
+}
+.seccionPlanes .textoPlanes h2 {
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #e5af5a;
+  text-transform: uppercase;
+  overflow: visible;
+}
+.seccionPlanes .textoPlanes button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.seccionPlanes .textoPlanes button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.seccionPlanes .explicacionPlan {
+  width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.seccionPlanes .explicacionPlan img {
+  width: 100px;
+  transition: width 200ms;
+}
+.seccionPlanes .explicacionPlan img:hover {
+  width: 105px;
+}
+.seccionPlanes .explicacionPlan p {
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 5;
+  text-shadow: 0px 0px 10px #1f4437;
+}
+.seccionPlanes .imagenGranos {
+  position: absolute;
+  width: 60%;
+  max-width: 60svh;
+  filter: drop-shadow(22px 22px 50px);
+  top: 60%;
+  right: -20%;
+  z-index: 4;
+}
+
+.paqueteGranos {
+  position: absolute;
+  width: 300px;
+  max-width: 60svh;
+  filter: drop-shadow(22px 22px 50px);
+  top: 190svh;
+  z-index: -3;
+}
+
+.seccionBeneficios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  max-width: 1400px;
+  align-items: center;
+  padding-top: 10svh;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+.seccionBeneficios h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #efe9d2;
+  text-align: center;
+  overflow: visible;
+}
+.seccionBeneficios span {
+  color: #e5af5a;
+  text-shadow: 0px 0px 50px #2F6C55;
+}
+.seccionBeneficios .beneficios {
+  margin: 10svh 0px 10svh 0svh;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.seccionBeneficios .beneficios div {
+  margin: 20px 2.5svh 20px 2.5svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 2svh 2svh 2svh 2svh;
+  transition: transform 300ms;
+  overflow: visible;
+  width: 250px;
+}
+.seccionBeneficios .beneficios div:hover {
+  box-shadow: 0 0 20px #be9c51, 0 0 50px #b18a44;
+  border-radius: 3svh;
+  background-color: rgba(47, 108, 85, 0.3137254902);
+  backdrop-filter: blur(50px);
+  transform: scale(1.1);
+}
+.seccionBeneficios .beneficios div:hover p {
+  opacity: 100%;
+}
+.seccionBeneficios .beneficios div h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e5af5a;
+  height: 10svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1svh 0px 1svh 0px;
+}
+.seccionBeneficios .beneficios div img {
+  height: 100px;
+  transition: transform 300ms;
+  filter: drop-shadow(3px 5px 5px rgba(229, 175, 90, 0.1882352941));
+  overflow: visible;
+}
+.seccionBeneficios .beneficios p {
+  width: 100%;
+  text-align: center;
+  opacity: 0%;
+  transition: opacity 300ms;
+}
+
+.descuento {
+  width: 40%;
+  min-width: 400px;
+  max-width: 650px;
+  height: 30svh;
+  border: 1px solid transparent;
+  border-radius: 3svh;
+  padding: 0svh 2svh 0svh 2svh;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  box-shadow: 0 0px 32px 0 #e5af5a;
+  background-color: #1f4437;
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 3px outset #be9c51;
+}
+.descuento h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  color: #e5af5a;
+}
+.descuento .barraDescuentos {
+  background-color: #e5af5a;
+  height: 80%;
+}
+.descuento .expDescuento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25svh;
+  width: 90%;
+}
+.descuento .expDescuento p {
+  font-size: 18px;
+}
+.descuento .expDescuento h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e5af5a;
+}
+.descuento .expDescuento h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  color: #e5af5a;
+}
+
+.shadow:before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -2;
+  background: conic-gradient(from 90deg at 40% -25%, #1f4437, #2F6C55);
+  filter: blur(100px);
+}
+
+.imgHeading {
+  width: 100%;
+  height: 20svh;
+  object-fit: fill;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-image: url(../MULTIMEDIA/IMAGENES/empaquetado_1.webp);
+  background-repeat: no-repeat;
+}
+
+.contHeading {
+  position: relative;
+  display: flex;
+  top: -3svh;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 20svh;
+}
+.contHeading .tituloProductos {
+  position: absolute;
+  font-size: 70px;
+  top: 10svh;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #e5af5a;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 0 30px #e5af5a;
+  overflow: visible;
+}
+
+.productos {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2svh;
+}
+.productos img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+  position: relative;
+}
+
+.imagenFondo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 0%;
+  -webkit-mask-image: linear-gradient(#191919 15%, transparent);
+  mask-image: linear-gradient(#191919 15%, transparent);
+  object-fit: cover;
+}
+
+.landingSobreNos {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  height: 90svh;
+  gap: 3svh;
+}
+.landingSobreNos .logoSobreNos {
+  width: auto;
+  height: 40svh;
+}
+.landingSobreNos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingSobreNos div .tituloPrincipal {
+  font-family: "Montserrat", sans-serif;
+  font-size: xx-large;
+  color: #e5af5a;
+  font-weight: 700;
+  overflow: visible;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #1b1b1b;
+  text-align: center;
+}
+.landingSobreNos div p {
+  width: 75%;
+  overflow: visible;
+  padding: 1rem 0 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 5px #1b1b1b;
+  font-size: 24px;
+}
+
+.inicioAbout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 40svh;
+  background-color: #efe9d2;
+  border-radius: 1.5svh;
+  overflow: visible;
+  margin-bottom: 10svh;
+}
+.inicioAbout img {
+  position: relative;
+  top: 0px;
+  border-radius: 3%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-left: 30px;
+  max-height: 700px;
+}
+.inicioAbout p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  min-width: 150px;
+  width: 90%;
+  color: #1b1b1b;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 2svh;
+}
+
+.quoteAbout {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 10svh 0 10svh 0;
+  height: 42svh;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.quoteAbout .fondoQuoteAbout {
+  background-image: radial-gradient(rgba(31, 68, 55, 0.6) 10%, rgba(31, 68, 55, 0.062745098));
+  z-index: -3;
+  position: absolute;
+  left: -20px;
+  width: 75%;
+  height: 80%;
+  border-radius: 24px;
+  box-shadow: 0px 0px 1200px #41886c;
+}
+.quoteAbout .textoQuoteAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: clamp(150px, 100%, 50rem);
+  text-wrap: wrap;
+  height: 70%;
+  margin: 20px 0px;
+  overflow: visible;
+}
+.quoteAbout .textoQuoteAbout * {
+  text-wrap: wrap;
+}
+.quoteAbout .textoQuoteAbout .tituloQuoteAbout {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #e5af5a;
+  font-weight: 700;
+  overflow: visible;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #1b1b1b;
+  text-align: right;
+  padding-right: 30px;
+}
+.quoteAbout .textoQuoteAbout .quote {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: clamp(150px, 100%, 50rem);
+  text-align: right;
+  text-shadow: 2px 2px 4px #1b1b1b;
+  padding-right: 30px;
+  margin: 0;
+}
+.quoteAbout video {
+  position: relative;
+  width: 100%;
+  border-radius: 2rem;
+  overflow-x: clip;
+  overflow-y: visible;
+  max-height: 600px;
+  object-fit: cover;
+  min-width: 300px;
+}
+
+.nuestrosServicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10svh 0 5svh 0;
+}
+.nuestrosServicios .secTitleNS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nuestrosServicios .secTitleNS .decoration {
+  background-color: #e5af5a;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.4s;
+  transform-origin: left;
+  width: 20svh;
+  transition: width 1000ms;
+}
+.nuestrosServicios .secTitleNS .decoration:hover .tituloNuestrosServicios {
+  width: 200%;
+}
+.nuestrosServicios .secTitleNS:hover .decoration {
+  width: 200%;
+}
+.nuestrosServicios .secTitleNS .tituloNuestrosServicios {
+  font-size: 50px;
+  font-weight: 700;
+  color: #e5af5a;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: #1b1b1b;
+  padding: 2svh;
+  text-align: center;
+  margin: 0;
+}
+.nuestrosServicios .tiposServicios {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 40px 40px;
+  overflow: visible;
+}
+.nuestrosServicios .tiposServicios .servicio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 500px;
+  background: #efe9d2;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 15px;
+  margin-top: 5svh;
+  overflow: visible;
+}
+.nuestrosServicios .tiposServicios .servicio:hover {
+  height: 550px;
+  cursor: pointer;
+}
+.nuestrosServicios .tiposServicios .servicio:hover .texto {
+  top: 340px;
+  height: 250px;
+}
+.nuestrosServicios .tiposServicios .servicio:hover .imgBox {
+  top: -50px;
+  box-shadow: 0 0px 30px #be9c51;
+}
+.nuestrosServicios .tiposServicios .servicio:hover h3 {
+  opacity: 0%;
+}
+.nuestrosServicios .tiposServicios .servicio .imgBox {
+  position: absolute;
+  top: 25px;
+  height: 400px;
+  width: 300px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  object-fit: cover;
+}
+.nuestrosServicios .tiposServicios .servicio .texto {
+  position: absolute;
+  top: 450px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.nuestrosServicios .tiposServicios .servicio .texto button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.nuestrosServicios .tiposServicios .servicio .texto button:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.nuestrosServicios .tiposServicios .servicio .texto p {
+  color: #090c0b;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  overflow: visible;
+}
+.nuestrosServicios .tiposServicios .servicio .texto h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #966d38;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  transition: opacity 300ms;
+}
+
+.seccionTestimonios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5svh 0px 10svh 0px;
+  overflow: visible;
+}
+.seccionTestimonios .contTituloTest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5svh 0px 5svh 0px;
+}
+.seccionTestimonios .contTituloTest .decoration {
+  background-color: #e5af5a;
+  height: 2px;
+  width: 15svh;
+  border-radius: 5px;
+  transition: all 0.4s;
+  transform-origin: left;
+  transition: width 1000ms;
+}
+.seccionTestimonios .contTituloTest .tituloTestimonios {
+  font-size: 50px;
+  font-weight: 700;
+  color: #e5af5a;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: #1b1b1b;
+  text-align: center;
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  overflow: visible;
+  margin: 0px;
+  padding: 2svh;
+}
+.seccionTestimonios .contTituloTest:hover .decoration {
+  width: 200%;
+}
+.seccionTestimonios .contTestimonios {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.seccionTestimonios .contTestimonios .testimonioJuana {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 400px;
+  min-width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #be9c51, #b18a44);
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.seccionTestimonios .contTestimonios .testimonioJuana .avatarTestimonio {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.seccionTestimonios .contTestimonios .testimonioJuana .textoTestimonio {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-wrap: wrap;
+}
+.seccionTestimonios .contTestimonios .testimonioJuana .textoTestimonio .nombreTestimonio, .seccionTestimonios .contTestimonios .testimonioJuana .textoTestimonio h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  color: #efe9d2;
+}
+.seccionTestimonios .contTestimonios .testimonioJuana .textoTestimonio h4 {
+  font-size: smaller;
+  color: #e5af5a;
+}
+.seccionTestimonios .contTestimonios .testimonioJose {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 400px;
+  min-width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #be9c51, #b18a44);
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.seccionTestimonios .contTestimonios .testimonioJose .avatarTestimonio {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.seccionTestimonios .contTestimonios .testimonioJose .textoTestimonio {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-wrap: wrap;
+}
+.seccionTestimonios .contTestimonios .testimonioJose .textoTestimonio .nombreTestimonio, .seccionTestimonios .contTestimonios .testimonioJose .textoTestimonio h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  color: #efe9d2;
+}
+.seccionTestimonios .contTestimonios .testimonioJose .textoTestimonio h4 {
+  font-size: smaller;
+  color: #e5af5a;
+}
+.seccionTestimonios .contTestimonios .testimonioElizabeth {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 400px;
+  min-width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #be9c51, #b18a44);
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.seccionTestimonios .contTestimonios .testimonioElizabeth .avatarTestimonio {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.seccionTestimonios .contTestimonios .testimonioElizabeth .textoTestimonio {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-wrap: wrap;
+}
+.seccionTestimonios .contTestimonios .testimonioElizabeth .textoTestimonio .nombreTestimonio, .seccionTestimonios .contTestimonios .testimonioElizabeth .textoTestimonio h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  color: #efe9d2;
+}
+.seccionTestimonios .contTestimonios .testimonioElizabeth .textoTestimonio h4 {
+  font-size: smaller;
+  color: #e5af5a;
+}
+
+.imagenFondoLan {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 0%;
+  -webkit-mask-image: linear-gradient(#191919 15%, transparent);
+  mask-image: linear-gradient(#191919 15%, transparent);
+  object-fit: fill;
+}
+
+.landingSuscripciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-height: 50svh;
+}
+.landingSuscripciones .tituloSuscripciones {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10svh;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 10vw, 5rem);
+  text-transform: uppercase;
+  background: linear-gradient(300deg, #be9c51, #966d38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seccionPasos {
+  height: 70svh;
+  min-height: 600px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 10svh;
+}
+.seccionPasos .pasosSus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+  width: 80%;
+  position: relative;
+  height: 20svh;
+  list-style: none;
+}
+.seccionPasos .pasosSus .continuacion {
+  display: none;
+  height: 50px;
+}
+.seccionPasos .pasosSus .paso {
+  width: clamp(200px, 20%, 300px);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 370px;
+  background-image: linear-gradient(45deg, rgba(31, 68, 55, 0.6), rgba(65, 136, 108, 0.6));
+  border-radius: 2rem;
+  padding: 0.6rem;
+  box-shadow: 0 8px 32px rgba(65, 136, 108, 0.5647058824);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: scale 300ms;
+}
+.seccionPasos .pasosSus .paso:hover {
+  scale: 1.23;
+}
+.seccionPasos .pasosSus .paso .imgPasos {
+  margin-top: 20px;
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+}
+.seccionPasos .pasosSus .paso .tituloPlan {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #efe9d2;
+  text-shadow: 0px 0px 10px #2F6C55;
+  height: fit-content;
+  text-align: center;
+  min-height: 60px;
+  text-align: center;
+}
+.seccionPasos .pasosSus .paso p {
+  font-family: "Open Sans", sans-serif;
+}
+.seccionPasos .fondoPasosSus {
+  position: absolute;
+  z-index: -5;
+  -webkit-mask-image: linear-gradient(#191919 0%, transparent, #191919 0);
+  mask-image: linear-gradient(transparent 0%, #191919 20%, #191919 50%, transparent 60%);
+  height: 200%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  top: 1svh;
+}
+
+.espacioPlanes {
+  width: 100%;
+  top: 100svh;
+  height: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.espacioPlanes .ventajasPlanes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.espacioPlanes .ventajasPlanes .tituloSuscripciones {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  color: #efe9d2;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #1f4437;
+  background-color: transparent;
+  text-wrap: wrap;
+  width: 90%;
+  position: relative;
+}
+.espacioPlanes .ventajasPlanes .listaVentajas {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 10svh 0px 10svh 0px;
+  gap: 20px;
+  list-style-type: disc;
+  width: 100%;
+  padding: 0 10%;
+  background-image: url(../MULTIMEDIA/IMAGENES/fondoCafeGranos.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60svh;
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(31, 68, 55, 0.6);
+  border-radius: 1rem;
+  height: 150px;
+  backdrop-filter: blur(5px);
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div img {
+  height: 120px;
+  width: 120px;
+  border-radius: 0.8rem;
+  padding: 10px;
+  margin: 0 15px;
+  background-color: rgba(14, 32, 27, 0.6);
+}
+.espacioPlanes .ventajasPlanes .listaVentajas div p {
+  text-transform: uppercase;
+  font-family: "Monserrat", sans-serif;
+  color: #f8f6ee;
+  text-wrap: wrap;
+  width: 50%;
+  margin: 0;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo {
+  z-index: -7;
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow: visible;
+  animation-name: movYWrapperArriba;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba .wrapperDecoYArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo {
+  position: absolute;
+  overflow: visible;
+  height: 100%;
+  width: 500px;
+  animation-name: movXWrapperArriba;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXArriba .wrapperDecoYArriba .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYArriba .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo .ventajasDecoArriba, .espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo .ventajasDecoAbajo {
+  z-index: -6;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: #1f4437;
+  filter: blur(150px);
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXAbajo {
+  position: absolute;
+  top: 500px;
+  animation-name: movYWrapperAbajo;
+}
+.espacioPlanes .ventajasPlanes .wrapperDecoXAbajo .wrapperDecoYAbajo {
+  right: 0;
+  animation-name: movXWrapperAbajo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.planes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 3svh;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.planes .cajaPlanes {
+  padding: 5%;
+  height: 350px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5647058824);
+  border-bottom: rgba(0, 0, 0, 0.5647058824);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(65, 136, 108, 0.3137254902), rgba(31, 68, 55, 0.5647058824));
+  backdrop-filter: blur(7px);
+  box-shadow: 5px 5px 10px #191919;
+  transition: all 600ms;
+}
+.planes .cajaPlanes .infoPlanes {
+  text-align: center;
+  width: 80%;
+}
+.planes .cajaPlanes .infoPlanes .nombresPlanes {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #efe9d2;
+  overflow: visible;
+  text-align: middle;
+}
+.planes .cajaPlanes .infoPlanes .precio {
+  color: #be9c51;
+  padding: 10px 0 10px 0;
+  text-shadow: 2px 2px 3px rgba(25, 25, 25, 0.4392156863);
+  text-transform: uppercase;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.planes .cajaPlanes .infoPlanes .precio span {
+  font-size: 16px;
+  vertical-align: middle;
+  overflow: visible;
+}
+.planes .cajaPlanes .infoPlanes .listaCaracteristicas {
+  margin: 0;
+  color: #efe9d2;
+  list-style-type: circle;
+  list-style-image: url(../MULTIMEDIA/VECTORES/tick_li.svg);
+  list-style-position: inside;
+  text-align: start;
+}
+.planes .cajaPlanes .botonPlan {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+  font-size: 16px;
+  width: 60%;
+  border-radius: 12px;
+}
+.planes .cajaPlanes .botonPlan:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+.planes .cajaPlanes:hover {
+  scale: 110%;
+  transform: translateY(-20px);
+  background-image: linear-gradient(rgba(65, 136, 108, 0.3137254902), rgba(65, 136, 108, 0.5647058824));
+}
+.planes .fondoPlanes {
+  position: absolute;
+  z-index: -3;
+  height: 600px;
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: bottom;
+  -webkit-mask-image: linear-gradient(#191919 0%, transparent, #191919 0);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
+}
+
+.landingContacto {
+  width: 100%;
+  height: 80svh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: visible;
+  justify-content: center;
+}
+.landingContacto .mapa {
+  width: 100%;
+  height: 50svh;
+  position: absolute;
+  z-index: -2;
+}
+.landingContacto .formulario {
+  width: 40%;
+  height: 100%;
+  max-height: 850px;
+  margin: 0svh 10svh 0px 20px;
+  padding: 3svh 3svh 3svh 5svh;
+  border-radius: 2svh;
+  background-color: rgba(47, 108, 85, 0.7);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(238, 238, 238, 0.3137254902);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3137254902);
+  overflow: hidden;
+}
+.landingContacto .formulario h1 {
+  font-family: "Gill Sans", sans-serif;
+  text-transform: uppercase;
+  color: #f8f6ee;
+  font-size: 32px;
+}
+.landingContacto .formulario h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e5af5a;
+  font-size: 16px;
+}
+.landingContacto .formulario .datosCliente {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.landingContacto .formulario .datosCliente .formGrupo {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+.landingContacto .formulario .datosCliente .formGrupo .formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #efe9d2;
+  font-family: "Montserrat", sans-serif;
+}
+.landingContacto .formulario .datosCliente .formGrupo .formInput {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.landingContacto .formulario .datosCliente .formGrupo .formInput:required, .landingContacto .formulario .datosCliente .formGrupo .formInput:invalid {
+  box-shadow: none;
+}
+.landingContacto .formulario .datosCliente .formGrupo .formInput::placeholder {
+  color: transparent;
+}
+.landingContacto .formulario .datosCliente .formGrupo .formInput:placeholder-shown ~ .formLabel {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.landingContacto .formulario .datosCliente .formMensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  height: 36svh;
+}
+.landingContacto .formulario .datosCliente .formMensaje label {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #efe9d2;
+  font-weight: 200;
+  margin-bottom: 7px;
+}
+.landingContacto .formulario .datosCliente .formMensaje .inputMensaje {
+  width: 400px;
+  border: none;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #efe9d2;
+  font-weight: 500;
+  margin-bottom: 7px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  outline: none;
+  padding: 12px;
+  resize: none;
+  height: 70%;
+  font-family: "Montserrat", sans-serif;
+}
+.landingContacto .formulario .botonSubmit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  --tw-text-opacity: 1;
+  color: #efe9d2;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  border: 2px solid transparent;
+  overflow: visible;
+  height: 50px;
+  width: fit-content;
+  background-image: linear-gradient(135deg, #be9c51 0%, #b18a44 100%);
+  transition: all 200ms;
+}
+.landingContacto .formulario .botonSubmit:hover {
+  background-image: linear-gradient(135deg, #b18a44 0%, #966d38 100%);
+  border: solid 2px #efe9d2;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 5svh;
+}
+.informacion .tituloInfoContact, .informacion h3 {
+  color: #e5af5a;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.informacion h3 {
+  color: #efe9d2;
+  font-size: 16px;
+}
+.informacion div {
+  display: flex;
+  padding-top: 2svh;
+  gap: 15px;
+}
+.informacion div img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  color: #efe9d2;
+  background-color: #efe9d2;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+footer {
+  height: 10svh;
+  margin-top: 5svh;
+  border-top: #966d38;
+  border-style: solid;
+  border-top-width: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row;
+  align-items: center;
+  background-color: #090c0b;
+}
+footer .logoBuna {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 50px;
+  object-fit: scale-down;
+}
+footer .barraMenuFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+}
+footer .barraMenuFooter li {
+  font-weight: 700;
+}
+footer .iconosRS {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+}
+footer .iconosRS a {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  margin-left: 1.5pc;
+}
+footer .iconosRS a img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+
+@media (max-width: 1200px) {
+  header nav {
+    display: none;
+    pointer-events: none;
+    width: 100px;
+  }
+  header a {
+    overflow: visible;
+  }
+  header .hamburguesa {
+    order: 1;
+    width: 40px;
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  footer .barraMenuFooter {
+    display: none;
+  }
+  .landing .titulo {
+    justify-content: left;
+    align-items: left;
+  }
+  .landing .titulo h1, .landing .titulo h2 {
+    font-size: 40px;
+    margin: 0;
+  }
+  .landing .botonesLanding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .landing .botonesLanding button {
+    margin: 20px 0 0 0;
+    height: 70px;
+  }
+  .areaSobreNos .seccionSobreNos {
+    background-image: linear-gradient(to top, rgba(31, 68, 55, 0.6) 10%, rgba(31, 68, 55, 0.6) 100%), url(../MULTIMEDIA/IMAGENES/cafe_restaurant.PNG);
+    height: 80svh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .areaSobreNos .seccionSobreNos .textoSobreNos {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .areaSobreNos .seccionSobreNos .textoSobreNos h2 {
+    margin: 0;
+  }
+  .areaSobreNos .seccionSobreNos .textoSobreNos p {
+    margin: 0;
+  }
+  .areaSobreNos .seccionSobreNos .textoSobreNos button {
+    margin: 20px 0 0 0;
+  }
+  .seccionPlanes {
+    height: 90svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 800px;
+  }
+  .seccionPlanes .textoPlanes {
+    align-items: center;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .seccionPlanes .imagenGranos {
+    top: 80%;
+    width: 100%;
+  }
+  .seccionBeneficios .beneficios {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .descuento {
+    height: 40svh;
+  }
+  .descuento .expDescuento {
+    overflow: visible;
+  }
+  .descuento .expDescuento p {
+    margin: 0%;
+    height: auto;
+    font-size: 16px;
+    overflow: visible;
+  }
+  .descuento .expDescuento h3 {
+    font-size: 18px;
+  }
+  .inicioAbout {
+    height: 80svh;
+    flex-direction: column;
+  }
+  .inicioAbout div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .inicioAbout div img {
+    top: -20px;
+    width: 110%;
+  }
+  .inicioAbout p {
+    height: max-content;
+    font-size: 16px;
+    padding: 0;
+    margin: 0%;
+  }
+  .quoteAbout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80svh;
+    padding: 0;
+    margin: 0;
+  }
+  .quoteAbout .fondoQuoteAbout {
+    left: 30px;
+  }
+  .quoteAbout .textoQuoteAbout {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 30px;
+  }
+  .quoteAbout .textoQuoteAbout .tituloQuoteAbout {
+    text-align: left;
+    font-size: 24px;
+    width: 80%;
+  }
+  .quoteAbout .textoQuoteAbout .quote {
+    text-align: left;
+    font-size: 16px;
+    width: 80%;
+  }
+  .quoteAbout video {
+    width: 100%;
+  }
+  .seccionPasos {
+    height: 130svh;
+  }
+  .seccionPasos .pasosSus {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130svh;
+  }
+  .seccionPasos .pasosSus .continuacion {
+    display: block;
+  }
+  .seccionPasos .pasosSus .paso {
+    height: 400px;
+    width: 80%;
+  }
+  .seccionPasos .fondoPasosSus {
+    width: 100vw;
+  }
+  .espacioPlanes {
+    height: 160svh;
+  }
+  .espacioPlanes .ventajasPlanes .listaVentajas {
+    height: 50svh;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+  }
+  .espacioPlanes .planes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .landingContacto {
+    align-items: center;
+    justify-content: center;
+    height: 140svh;
+  }
+  .landingContacto .mapa {
+    position: relative;
+  }
+  .landingContacto .formulario {
+    height: 80svh;
+    width: 95%;
+    margin: 20px 0 0 0;
+  }
+  .landingContacto .formulario .datosCliente {
+    margin: 0;
+  }
+  .imgHeading {
+    height: 10svh;
+  }
+  .imgHeading .contHeading {
+    top: -7svh;
+  }
+  .imgHeading .contHeading .tituloProductos {
+    font-size: 40px;
+  }
+  .productos {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=stylesheetsOP.css.map */

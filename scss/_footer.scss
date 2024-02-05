@@ -1,0 +1,52 @@
+footer{
+    height: 10svh;
+    margin-top: 5svh;
+    border-top: $gold3;
+    border-style: solid;
+    border-top-width: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    align-items: center;
+    background-color: $black950;
+    & .logoBuna{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        max-height: 50px;
+        object-fit: scale-down;
+    }
+    & .barraMenuFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+        list-style: none;
+        & li{
+            font-weight: 700;
+        }
+    }
+    & .iconosRS{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        & a{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            margin-left: 1.5pc;
+            & img{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+            }
+        }
+    }
+}

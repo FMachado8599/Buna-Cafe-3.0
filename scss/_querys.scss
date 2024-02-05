@@ -1,0 +1,232 @@
+@media (max-width:1200px) {
+header{
+    & nav{
+        display: none;
+        pointer-events: none;
+        width: 100px;
+    }
+    & a{
+        overflow: visible;
+    }
+    & .hamburguesa{
+        order: 1;
+        width: 40px;
+        display: flex;
+    }
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    // --------------------------------------footer--------------------------------------
+    footer{    
+        & .barraMenuFooter{
+        display: none;
+    }
+    }
+    // --------------------------------------index--------------------------------------   
+    .landing{
+        & .titulo{
+            justify-content: left;
+            align-items: left;
+            & h1,h2{
+                font-size: 40px;
+                margin: 0;
+            }
+        }
+        & .botonesLanding{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & button{
+                margin: 20px 0 0 0;
+                height: 70px;
+            }
+        }
+    }
+    .areaSobreNos{
+        & .seccionSobreNos{
+            background-image: linear-gradient(to top, $green299 10%, $green299 100%), url(../MULTIMEDIA/IMAGENES/cafe_restaurant.PNG) ;
+            height: 80svh;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,1fr);
+            & .textoSobreNos{
+                grid-column: 1/2;
+                grid-row: 1/3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                & h2{
+                    margin: 0;
+                }
+                & p{
+                    margin: 0;
+                }
+                & button{
+                        margin: 20px 0 0 0;
+                }
+            }
+        }
+    }
+    .seccionPlanes{
+        height: 90svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 800px;
+        & .textoPlanes{
+            align-items: center;
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+        & .imagenGranos{
+            top: 80%;
+            width: 100%;
+        }
+    }
+    .seccionBeneficios{
+        & .beneficios{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .descuento{
+        height: 40svh;
+        & .expDescuento{
+            overflow: visible;
+            & p{
+                margin: 0%;
+                height: auto;
+                font-size: 16px;
+                overflow: visible;
+            }
+            & h3{
+                font-size: 18px;
+            }
+        }
+    }
+    // --------------------------------------Sobre Nosotros--------------------------------------   
+    .inicioAbout{
+        height: 80svh;
+        flex-direction: column;
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            & img{
+                top: -20px;
+                width: 110%;
+            }
+        }
+        & p{
+            height: max-content;
+            font-size: 16px;
+            padding: 0;
+            margin: 0%;
+        }
+    }
+    .quoteAbout{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80svh;
+        padding: 0;
+        margin: 0;
+        & .fondoQuoteAbout{
+            left: 30px;
+        }
+        & .textoQuoteAbout{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: 80%;
+            margin-left:30px;
+            & .tituloQuoteAbout{
+                text-align: left;
+                font-size: 24px;
+                width: 80%;
+            }
+            & .quote{
+                text-align: left;
+                font-size: 16px;
+                width: 80%;
+            }
+        }
+        & video{
+            width: 100%;
+        }
+    }
+        // --------------------------------------Suscripciones--------------------------------------   
+    .seccionPasos{
+        height: 130svh;
+        & .pasosSus{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 130svh;
+            & .continuacion{
+                display: block;
+            }
+            & .paso{
+                height: 400px;
+                width: 80%;
+            }
+        }
+        & .fondoPasosSus{
+            width: 100vw;
+        }
+    }
+    .espacioPlanes{
+        height: 160svh;
+        & .ventajasPlanes{
+            .listaVentajas{
+                height: 50svh;
+                text-align: center;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(4,1fr);
+                height: auto;
+            }
+        }
+        & .planes{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,1fr);
+        }
+    }
+        // --------------------------------------Contacto--------------------------------------   
+    .landingContacto{
+        align-items: center;
+        justify-content: center;
+        height: 140svh;
+        & .mapa{
+            position: relative;
+        }
+        & .formulario{
+            height: 80svh;
+            width: 95%;
+            margin: 20px 0 0 0;
+            & .datosCliente{
+                margin: 0;
+            }
+        }
+    }
+        // --------------------------------------Productos--------------------------------------   
+    .imgHeading{
+        height: 10svh;
+        .contHeading{
+            top: -7svh;
+            .tituloProductos{
+                font-size: 40px;
+            }
+        }
+    }
+    .productos{
+        display: flex;
+        flex-direction: column;
+    }
+}

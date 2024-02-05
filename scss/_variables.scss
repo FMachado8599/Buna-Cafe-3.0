@@ -1,0 +1,74 @@
+// --------COLORES--------
+// DORADO
+$gold1: #be9c51;
+$gold110: #be9c5110;
+$gold120: #be9c5120;
+$gold130: #be9c5110;
+$gold140: #be9c5140;
+$gold150: #be9c5150;
+$gold160: #be9c5160;
+$gold170: #be9c5170;
+$gold180: #be9c5180;
+$gold190: #be9c5190;
+$gold199: #be9c5199;
+$gold2: #b18a44;
+$gold3: #966d38;
+
+// VERDE
+$green1: #41886c;
+$green110: #41886c10;
+$green120: #41886c20;
+$green130: #41886c30;
+$green140: #41886c40;
+$green150: #41886c50;
+$green160: #41886c60;
+$green170: #41886c70;
+$green180: #41886c80;
+$green190: #41886c90;
+$green199: #41886c99;
+$green2: #1f4437;
+$green210: #1f443710;
+$green220: #1f443720;
+$green230: #1f443730;
+$green240: #1f443740;
+$green250: #1f443750;
+$green260: #1f443760;
+$green270: #1f443770;
+$green280: #1f443780;
+$green290: #1f443790;
+$green299: #1f443799;
+$green3: #0e201b;
+$green310: #0e201b10;
+$green320: #0e201b20;
+$green330: #0e201b30;
+$green340: #0e201b40;
+$green350: #0e201b50;
+$green360: #0e201b60;
+$green370: #0e201b70;
+$green380: #0e201b80;
+$green390: #0e201b90;
+$green399: #0e201b99;
+
+// BLANCO
+$white1: #efe9d2;
+$white2: #f8f6ee;
+
+// NEGRO
+$black950: #090c0b;
+
+// --------PALETAS--------
+$gold: (
+    "gold1": $gold1,
+    "gold2": $gold2,
+    "gold3": $gold3,
+);
+$goldGrad: linear-gradient(135deg, $gold1, $gold2);
+
+// FONTS
+@font-face{
+    font-family: "Monserrat";
+    src: url(./MULTIMEDIA/FONTS/Montserrat-Bold.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100;0,700;0,800;0,900;1,100;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap');
+$fontH: "Montserrat", sans-serif;
+$fontP: "Open Sans", sans-serif;
