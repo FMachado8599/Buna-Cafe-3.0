@@ -1822,8 +1822,14 @@ footer .iconosRS a img {
   }
 }
 @media (max-width: 480px) {
+  header {
+    z-index: 10;
+  }
   footer .barraMenuFooter {
     display: none;
+  }
+  main {
+    z-index: 9;
   }
   .landing .titulo {
     justify-content: left;
@@ -1896,11 +1902,11 @@ footer .iconosRS a img {
   .descuento .expDescuento p {
     margin: 0%;
     height: auto;
-    font-size: 16px;
+    font-size: 14px;
     overflow: visible;
   }
   .descuento .expDescuento h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .inicioAbout {
     height: 80svh;
