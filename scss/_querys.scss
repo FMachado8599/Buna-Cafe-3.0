@@ -1,21 +1,7 @@
-@media (max-width:1200px) {
-header{
-    & nav{
-        display: none;
-        pointer-events: none;
-        width: 100px;
+@media (max-width:1200px){
+    footer{
+        
     }
-    & a{
-        overflow: visible;
-    }
-    & .hamburguesa{
-        order: 1;
-        width: 40px;
-        display: flex;
-    }
-    }
-
-
 }
 
 @media (max-width: 480px) {
@@ -86,6 +72,7 @@ header{
         justify-content: space-evenly;
         align-items: center;
         min-height: 800px;
+        overflow: hidden;
         & .textoPlanes{
             align-items: center;
             text-align: center;
@@ -173,12 +160,13 @@ header{
     }
         // --------------------------------------Suscripciones--------------------------------------   
     .seccionPasos{
-        height: 130svh;
+        overflow: visible;
         & .pasosSus{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 130svh;
+            height: auto;
+
             & .continuacion{
                 display: block;
             }
@@ -189,6 +177,8 @@ header{
         }
         & .fondoPasosSus{
             width: 100vw;
+            height: 100%;
+            left: 0px;
         }
     }
     .espacioPlanes{
@@ -202,9 +192,18 @@ header{
                 height: auto;
             }
         }
-        & .planes{
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3,1fr);
+    }
+    .planes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        & .fondoPlanes{
+            top: 0;
+            object-fit: cover;
+            height: 100%;
+            max-height: 100%;
         }
     }
         // --------------------------------------Contacto--------------------------------------   
