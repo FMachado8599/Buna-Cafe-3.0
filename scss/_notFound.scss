@@ -1,0 +1,40 @@
+.notFoundMain{
+    & .imagenFondo{
+        max-height: 100svh;
+        overflow: hidden;
+    }
+}
+.notFoundSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    & img{
+        position: absolute;
+        width: clamp(300px,60svh, 1000px);
+        z-index: -2;
+        transform: translate(top 50%, left 50%);
+        opacity: 50%;
+    }
+    & h1{
+        font-family: $fontH;
+        font-size: clamp(30px, 300px, 450px);
+        color: $gold1;
+    }
+    & h2{
+        font-family: $fontH;
+        font-size: clamp(24px, 32px, 48px);
+        color: $white1;
+        text-transform: uppercase;
+    }
+    & p{
+        font-size: clamp(16px, 20px, 24px);
+    }
+    & button{
+        @include boton(
+            linear-gradient(135deg, $gold1 0%, $gold2 100%),
+            linear-gradient(135deg, $gold2 0%, $gold3 100%),
+            solid 2px $white1);
+    }
+}
