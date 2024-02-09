@@ -1,6 +1,8 @@
-@media (max-width:1200px){
+@media (max-width: 1000px) { 
     footer{
-        
+        & ul{
+            display: none;
+        }
     }
 }
 
@@ -9,12 +11,11 @@
     header{
         z-index: 10;
     }
-    
     // --------------------------------------footer--------------------------------------
-    footer{    
-        & .barraMenuFooter{
-        display: none;
-    }
+    footer{
+        & ul{
+            display: none;
+        }
     }
     // --------------------------------------main--------------------------------------
     main{
@@ -106,39 +107,51 @@
         }
     }
     // --------------------------------------Sobre Nosotros--------------------------------------   
-    .inicioAbout{
-        height: 80svh;
-        flex-direction: column;
+    .landingSobreNos{
+        height: 100svh;
         & div{
-            display: flex;
+            & p{
+                font-size: 18px;
+            }
+        }
+    }
+    section{
+        height: 1000px;
+        .inicioAbout{
+            height: clamp(500px, 600px, 900px);
             flex-direction: column;
+            display: flex;
             justify-content: center;
             align-items: center;
             padding: 0;
+            height: auto;
             & img{
-                top: -20px;
-                width: 110%;
+                    top: -20px;
+                    height: clamp(330px,400px,450px);
+                    width: clamp(330px,400px,450px);
+                    margin: 0;
+            }
+            & p{
+                height: clamp(300px,5rem,600px);
+                font-size: 16px;
+                padding: 0;
+                margin-bottom:30px;
             }
         }
-        & p{
-            height: max-content;
-            font-size: 16px;
-            padding: 0;
-            margin: 0%;
-        }
-    }
+    }   
     .quoteAbout{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 80svh;
+        height: 90svh;
         padding: 0;
         margin: 0;
         & .fondoQuoteAbout{
             left: 30px;
+            height: clamp(550px,70svh,700px);
         }
         & .textoQuoteAbout{
-            justify-content: center;
+            justify-content: end;
             text-align: center;
             align-items: center;
             width: 80%;
@@ -152,11 +165,15 @@
                 text-align: left;
                 font-size: 16px;
                 width: 80%;
+                padding: 0;
             }
         }
         & video{
             width: 100%;
         }
+    }
+    .nuestrosServicios{
+        height: auto;
     }
         // --------------------------------------Suscripciones--------------------------------------   
     .seccionPasos{

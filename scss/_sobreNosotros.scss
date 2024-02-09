@@ -47,17 +47,24 @@
         }
     }
 }
-.inicioAbout{
+section{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    height: 40svh;
-    background-color: #efe9d2;
-    border-radius: 1.5svh;
+    height: 700px;
     overflow: visible;
-    margin-bottom:10svh;
+    .inicioAbout{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: clamp(40svh,40svh,500px);
+        width: 70%;
+        max-width: 1800px;
+        background-color: #efe9d2;
+        border-radius: 1.5svh;
+        overflow: visible;
+        margin-bottom:10svh;
         & img{
             position: relative;
             top: 0px;
@@ -66,18 +73,20 @@
             aspect-ratio: 1/1;
             margin-left: 30px;
             max-height: 700px;
+            max-width: 700px;
         }
-    & p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-        min-width: 150px;
-        width: 90%;
-        color: #1b1b1b;
-        overflow: hidden;
-        font-size: 20px;
-        padding: 2svh;
+        & p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            min-width: 150px;
+            width: 90%;
+            color: #1b1b1b;
+            overflow: visible;
+            font-size: 16px;
+            padding: 2svh;
+        }
     }
 }
 .quoteAbout{
@@ -143,12 +152,15 @@
         border-radius: 2rem;
         overflow-x: clip;
         overflow-y: visible;
-        max-height: 600px;
+        height: clamp(200px,400px,500px);
         object-fit: cover;
-        min-width: 300px;
+        width: clamp(300px,600px,700px);
+
     }
 }
 .nuestrosServicios{
+    position: relative;
+    top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,6 +171,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        min-height: 150px;
         & .decoration{
             background-color: #e5af5a;
             height: 2px;

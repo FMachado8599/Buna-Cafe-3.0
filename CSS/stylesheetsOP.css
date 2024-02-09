@@ -761,19 +761,27 @@ header nav .collapsing {
   font-size: 24px;
 }
 
-.inicioAbout {
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  overflow: visible;
+}
+section .inicioAbout {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: clamp(40svh, 40svh, 500px);
   width: 70%;
-  height: 40svh;
+  max-width: 1800px;
   background-color: #efe9d2;
   border-radius: 1.5svh;
   overflow: visible;
   margin-bottom: 10svh;
 }
-.inicioAbout img {
+section .inicioAbout img {
   position: relative;
   top: 0px;
   border-radius: 3%;
@@ -781,8 +789,9 @@ header nav .collapsing {
   aspect-ratio: 1/1;
   margin-left: 30px;
   max-height: 700px;
+  max-width: 700px;
 }
-.inicioAbout p {
+section .inicioAbout p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -790,8 +799,8 @@ header nav .collapsing {
   min-width: 150px;
   width: 90%;
   color: #1b1b1b;
-  overflow: hidden;
-  font-size: 20px;
+  overflow: visible;
+  font-size: 16px;
   padding: 2svh;
 }
 
@@ -859,12 +868,14 @@ header nav .collapsing {
   border-radius: 2rem;
   overflow-x: clip;
   overflow-y: visible;
-  max-height: 600px;
+  height: 400px;
   object-fit: cover;
-  min-width: 300px;
+  width: 600px;
 }
 
 .nuestrosServicios {
+  position: relative;
+  top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -876,6 +887,7 @@ header nav .collapsing {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 150px;
 }
 .nuestrosServicios .secTitleNS .decoration {
   background-color: #e5af5a;
@@ -1763,7 +1775,6 @@ header nav .collapsing {
 }
 
 footer {
-  height: 10svh;
   border: 0;
   border-top: #966d38;
   border-style: solid;
@@ -1771,10 +1782,12 @@ footer {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row;
+  flex-wrap: wrap;
   align-items: center;
   background-color: #090c0b;
 }
 footer .logoBuna {
+  margin-top: 5%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1782,9 +1795,11 @@ footer .logoBuna {
   object-fit: scale-down;
 }
 footer .barraMenuFooter {
+  margin: 20px 0 20px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   list-style: none;
@@ -1798,13 +1813,14 @@ footer .iconosRS {
   align-items: center;
   justify-content: space-around;
   height: auto;
+  padding: 30px 0 30px 0;
 }
 footer .iconosRS a {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 40px;
   margin-left: 1.5pc;
 }
 footer .iconosRS a img {
@@ -1812,14 +1828,19 @@ footer .iconosRS a img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 40px;
 }
 
+@media (max-width: 1000px) {
+  footer ul {
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   header {
     z-index: 10;
   }
-  footer .barraMenuFooter {
+  footer ul {
     display: none;
   }
   main {
@@ -1903,40 +1924,50 @@ footer .iconosRS a img {
   .descuento .expDescuento h3 {
     font-size: 20px;
   }
-  .inicioAbout {
-    height: 80svh;
-    flex-direction: column;
+  .landingSobreNos {
+    height: 100svh;
   }
-  .inicioAbout div {
-    display: flex;
+  .landingSobreNos div p {
+    font-size: 18px;
+  }
+  section {
+    height: 1000px;
+  }
+  section .inicioAbout {
+    height: 600px;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    height: auto;
   }
-  .inicioAbout div img {
+  section .inicioAbout img {
     top: -20px;
-    width: 110%;
+    height: 400px;
+    width: 400px;
+    margin: 0;
   }
-  .inicioAbout p {
-    height: max-content;
+  section .inicioAbout p {
+    height: clamp(300px, 5rem, 600px);
     font-size: 16px;
     padding: 0;
-    margin: 0%;
+    margin-bottom: 30px;
   }
   .quoteAbout {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80svh;
+    height: 90svh;
     padding: 0;
     margin: 0;
   }
   .quoteAbout .fondoQuoteAbout {
     left: 30px;
+    height: clamp(550px, 70svh, 700px);
   }
   .quoteAbout .textoQuoteAbout {
-    justify-content: center;
+    justify-content: end;
     text-align: center;
     align-items: center;
     width: 80%;
@@ -1951,9 +1982,13 @@ footer .iconosRS a img {
     text-align: left;
     font-size: 16px;
     width: 80%;
+    padding: 0;
   }
   .quoteAbout video {
     width: 100%;
+  }
+  .nuestrosServicios {
+    height: auto;
   }
   .seccionPasos {
     overflow: visible;
