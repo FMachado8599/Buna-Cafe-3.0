@@ -31,10 +31,13 @@
     & p{
         font-size: clamp(16px, 20px, 24px);
     }
-    & button{
-        @include boton(
-            linear-gradient(135deg, $gold1 0%, $gold2 100%),
-            linear-gradient(135deg, $gold2 0%, $gold3 100%),
-            solid 2px $white1);
+    & a{
+        & button{
+            @include boton(
+                linear-gradient(135deg, $gold1 0%, $gold2 100%),
+                linear-gradient(135deg, $gold2 0%, $gold3 100%),
+                solid 2px $white1);
+        }
     }
+
 }
