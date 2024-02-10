@@ -618,6 +618,7 @@ header nav .collapsing {
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border: 3px outset #be9c51;
+  margin-bottom: 10svh;
 }
 .descuento h2 {
   font-family: "Montserrat", sans-serif;
