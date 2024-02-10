@@ -13,8 +13,11 @@
     }
     // --------------------------------------footer--------------------------------------
     footer{
-        & ul{
-            display: none;
+        height: auto;
+        flex-direction: column;
+        & .barraMenuFooter{
+            flex-direction: column;
+
         }
     }
     // --------------------------------------main--------------------------------------
@@ -73,7 +76,7 @@
         justify-content: space-evenly;
         align-items: center;
         min-height: 800px;
-        overflow: hidden;
+        overflow: visible;
         & .textoPlanes{
             align-items: center;
             text-align: center;
@@ -82,9 +85,15 @@
         & .imagenGranos{
             top: 80%;
             width: 100%;
+            min-width: 350px;
+            height: auto;
         }
     }
     .seccionBeneficios{
+        flex-wrap: nowrap;
+        height: auto;
+        min-height: 1400px;
+
         & .beneficios{
             flex-direction: column;
             justify-content: center;
@@ -93,6 +102,8 @@
     }
     .descuento{
         height: 40svh;
+        margin-bottom: 10svh;
+        min-height: 260px;
         & .expDescuento{
             overflow: visible;
             & p{
@@ -115,13 +126,12 @@
             }
         }
     }
-    section{
-        height: 1000px;
+    .seccionInicioAbout{
+        height: auto;
         .inicioAbout{
             height: clamp(500px, 600px, 900px);
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
             padding: 0;
             height: auto;
             min-height: auto;
@@ -144,21 +154,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 90svh;
+        height: auto;
         padding: 0;
         margin: 0;
         & .fondoQuoteAbout{
             left: 30px;
-            height: 90%;
-            width: 80%;
-            bottom: 5%;
+            height: 100%;
+            width: 80%;;
         }
         & .textoQuoteAbout{
             justify-content: end;
             text-align: center;
             align-items: center;
             width: 80%;
-            margin-left:30px;
+            margin: 20px 0 20px 30px;
             & .tituloQuoteAbout{
                 text-align: left;
                 font-size: 24px;
@@ -238,6 +247,7 @@
         }
         & .formulario{
             height: 80svh;
+            min-height: 650px;
             width: 95%;
             margin: 20px 0 0 0;
             & .datosCliente{
@@ -245,18 +255,25 @@
             }
         }
     }
+    
         // --------------------------------------Productos--------------------------------------   
-    .imgHeading{
-        height: 10svh;
-        .contHeading{
-            top: -7svh;
-            .tituloProductos{
-                font-size: 40px;
+        .tituloProductos{
+            & h1{
+                font-size: clamp(32px, 10svh,60px);
             }
         }
-    }
-    .productos{
+        .productos{
         display: flex;
         flex-direction: column;
+        height: auto;
+        width: 80%;
+        margin: 10svh 0 10svh 0;
+        gap: 5svh;
+        overflow: visible;
+        & img{
+            &:hover{
+                scale: 1.05;
+            }
+        }
     }
 }
